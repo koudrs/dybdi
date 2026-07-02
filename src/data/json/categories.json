@@ -1,0 +1,32 @@
+[
+  {
+    "id": "discos-diamante",
+    "name": "Discos de Diamante",
+    "description": "Discos de corte para hormigón, asfalto, porcelánicos y materiales duros",
+    "icon": "disc"
+  },
+  {
+    "id": "brocas-diamante",
+    "name": "Brocas de Diamante",
+    "description": "Brocas de perforación en húmedo para hormigón armado y albañilería",
+    "icon": "drill"
+  },
+  {
+    "id": "copas-desgaste",
+    "name": "Copas de Desgaste",
+    "description": "Herramientas de desbaste para preparación de superficies",
+    "icon": "cup"
+  },
+  {
+    "id": "maquinaria",
+    "name": "Maquinaria",
+    "description": "Cortadoras de suelo y equipos de perforación profesional",
+    "icon": "machine"
+  },
+  {
+    "id": "accesorios",
+    "name": "Accesorios",
+    "description": "Adaptadores, extensiones y accesorios para equipos de perforación",
+    "icon": "tools"
+  }
+]

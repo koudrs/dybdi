@@ -1,0 +1,574 @@
+[
+  {
+    "id": "adaptador-hembra-114",
+    "sku": "13-071",
+    "name": "Adaptador Hembra 1 1/4\" A H",
+    "category": "accesorios",
+    "description": "Adaptador hembra de conexión 1 1/4\" para sistemas de perforación con broca diamantada.",
+    "features": [
+      "Conexión 1 1/4\"",
+      "Alta durabilidad",
+      "Compatible con sistemas estándar"
+    ],
+    "applications": [
+      "Sistemas de perforación",
+      "Conexión de brocas",
+      "Equipos de perforación húmeda"
+    ]
+  },
+  {
+    "id": "broca-humedo-34",
+    "sku": "14-207",
+    "name": "Broca de Corte Húmedo 3/4\"",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones eléctricas"
+    ],
+    "specs": {
+      "Diámetro": "3/4\""
+    }
+  },
+  {
+    "id": "broca-humedo-1",
+    "sku": "14-209",
+    "name": "Broca de Corte Húmedo 1\"",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones sanitarias"
+    ],
+    "specs": {
+      "Diámetro": "1\""
+    }
+  },
+  {
+    "id": "broca-humedo-114",
+    "sku": "14-227",
+    "name": "Broca de Corte Húmedo 1 1/4\"",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones de aire acondicionado"
+    ],
+    "specs": {
+      "Diámetro": "1 1/4\""
+    }
+  },
+  {
+    "id": "broca-humedo-112",
+    "sku": "14-232",
+    "name": "Broca de Corte Húmedo 1 1/2\"",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Tuberías"
+    ],
+    "specs": {
+      "Diámetro": "1 1/2\""
+    }
+  },
+  {
+    "id": "broca-humedo-2b",
+    "sku": "16-700L",
+    "name": "Broca de Corte Húmedo 2\"B",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo de mayor diámetro.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones industriales"
+    ],
+    "specs": {
+      "Diámetro": "2\"B"
+    }
+  },
+  {
+    "id": "broca-humedo-25b",
+    "sku": "16-718L",
+    "name": "Broca de Corte Húmedo 2.5\"B",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo de mayor diámetro.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones industriales"
+    ],
+    "specs": {
+      "Diámetro": "2.5\"B"
+    }
+  },
+  {
+    "id": "broca-humedo-3b",
+    "sku": "16-735L",
+    "name": "Broca de Corte Húmedo 3\"B",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo de mayor diámetro.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones industriales"
+    ],
+    "specs": {
+      "Diámetro": "3\"B"
+    }
+  },
+  {
+    "id": "broca-humedo-4b",
+    "sku": "16-705L",
+    "name": "Broca de Corte Húmedo 4\"B",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo de gran diámetro.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Perforaciones de gran diámetro"
+    ],
+    "specs": {
+      "Diámetro": "4\"B"
+    }
+  },
+  {
+    "id": "broca-humedo-5b",
+    "sku": "16-709L",
+    "name": "Broca de Corte Húmedo 5\"B",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo de gran diámetro.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Perforaciones de gran diámetro"
+    ],
+    "specs": {
+      "Diámetro": "5\"B"
+    }
+  },
+  {
+    "id": "broca-humedo-8b",
+    "sku": "16-715L",
+    "name": "Broca de Corte Húmedo 8\"B",
+    "category": "brocas-diamante",
+    "description": "Broca de diamante para perforación en húmedo de gran diámetro.",
+    "features": [
+      "Perforación en húmedo",
+      "Corte rápido",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Perforaciones de gran diámetro"
+    ],
+    "specs": {
+      "Diámetro": "8\"B"
+    }
+  },
+  {
+    "id": "cplus-14",
+    "sku": "23-020",
+    "name": "C-PLUS 14\"",
+    "category": "discos-diamante",
+    "description": "Disco de diamante multipropósito para hormigón, piedras y albañilería. Soldadura LASER.",
+    "features": [
+      "Soldadura LASER",
+      "Multipropósito",
+      "Alta durabilidad"
+    ],
+    "applications": [
+      "Hormigón",
+      "Piedras de hormigón",
+      "Albañilería"
+    ],
+    "specs": {
+      "Diámetro": "14\""
+    }
+  },
+  {
+    "id": "cplus-18",
+    "sku": "23-022",
+    "name": "C-PLUS 18\"",
+    "category": "discos-diamante",
+    "description": "Disco de diamante multipropósito para hormigón, piedras y albañilería. Soldadura LASER.",
+    "features": [
+      "Soldadura LASER",
+      "Multipropósito",
+      "Alta durabilidad"
+    ],
+    "applications": [
+      "Hormigón",
+      "Piedras de hormigón",
+      "Albañilería"
+    ],
+    "specs": {
+      "Diámetro": "18\""
+    }
+  },
+  {
+    "id": "very-hard-tiles-tec-f-5",
+    "sku": "24-075",
+    "name": "Disco Porcelanato Extra Duro TEC-F 5\"",
+    "category": "discos-diamante",
+    "description": "Disco turbo para corte de porcelánicos, piedras naturales, cerámica y materiales extra duros. Corte limpio y fino.",
+    "features": [
+      "Corte extra fino",
+      "Para materiales duros",
+      "Acabado limpio"
+    ],
+    "applications": [
+      "Porcelánicos",
+      "Piedras naturales",
+      "Cerámica",
+      "Materiales extra duros"
+    ],
+    "specs": {
+      "Diámetro": "5\""
+    }
+  },
+  {
+    "id": "very-hard-tiles-tec-f-7",
+    "sku": "24-077",
+    "name": "Disco Porcelanato Extra Duro TEC-F 7\"",
+    "category": "discos-diamante",
+    "description": "Disco turbo para corte de porcelánicos, piedras naturales, cerámica y materiales extra duros. Corte limpio y fino.",
+    "features": [
+      "Corte extra fino",
+      "Para materiales duros",
+      "Acabado limpio"
+    ],
+    "applications": [
+      "Porcelánicos",
+      "Piedras naturales",
+      "Cerámica",
+      "Materiales extra duros"
+    ],
+    "specs": {
+      "Diámetro": "7\""
+    }
+  },
+  {
+    "id": "titan-412",
+    "sku": "24-141",
+    "name": "TITAN 4\"1/2 - 115mm",
+    "category": "discos-diamante",
+    "description": "Disco sinterizado segmentado para hormigón, piedras y albañilería. Alta durabilidad.",
+    "features": [
+      "Sinterizado",
+      "Segmentado",
+      "Alta durabilidad"
+    ],
+    "applications": [
+      "Hormigón",
+      "Piedras de hormigón",
+      "Albañilería"
+    ],
+    "specs": {
+      "Diámetro": "4\"1/2 (115mm)",
+      "Alto segmento": "10mm"
+    }
+  },
+  {
+    "id": "titan-7",
+    "sku": "24-144",
+    "name": "TITAN 7\" - 180mm",
+    "category": "discos-diamante",
+    "description": "Disco sinterizado segmentado para hormigón, piedras y albañilería. Alta durabilidad.",
+    "features": [
+      "Sinterizado",
+      "Segmentado",
+      "Alta durabilidad"
+    ],
+    "applications": [
+      "Hormigón",
+      "Piedras de hormigón",
+      "Albañilería"
+    ],
+    "specs": {
+      "Diámetro": "7\" (180mm)",
+      "Alto segmento": "10mm"
+    }
+  },
+  {
+    "id": "concrete-asphalt-14",
+    "sku": "25-351",
+    "name": "Concreto 80% Asfalto 20% - 14\"",
+    "category": "discos-diamante",
+    "description": "Disco especializado para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
+    "features": [
+      "Para concreto y asfalto",
+      "Corte combinado",
+      "Alta durabilidad"
+    ],
+    "applications": [
+      "Pavimentos mixtos",
+      "Concreto con asfalto",
+      "Trabajos de reparación"
+    ],
+    "specs": {
+      "Diámetro": "14\""
+    }
+  },
+  {
+    "id": "concrete-asphalt-18",
+    "sku": "25-353",
+    "name": "Concreto 80% Asfalto 20% - 18\"",
+    "category": "discos-diamante",
+    "description": "Disco especializado para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
+    "features": [
+      "Para concreto y asfalto",
+      "Corte combinado",
+      "Alta durabilidad"
+    ],
+    "applications": [
+      "Pavimentos mixtos",
+      "Concreto con asfalto",
+      "Trabajos de reparación"
+    ],
+    "specs": {
+      "Diámetro": "18\""
+    }
+  },
+  {
+    "id": "asphalt-fresh-tracer-12",
+    "sku": "26-412",
+    "name": "Disco Asfalto y Concreto Fresco 12\"",
+    "category": "discos-diamante",
+    "description": "Disco diseñado para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
+    "features": [
+      "Para asfalto fresco",
+      "Para concreto fresco",
+      "Corte de trazado"
+    ],
+    "applications": [
+      "Asfalto fresco",
+      "Concreto fresco",
+      "Juntas de expansión",
+      "Trazado de líneas"
+    ],
+    "specs": {
+      "Diámetro": "12\""
+    }
+  },
+  {
+    "id": "asphalt-fresh-tracer-14",
+    "sku": "26-414",
+    "name": "Disco Asfalto y Concreto Fresco 14\"",
+    "category": "discos-diamante",
+    "description": "Disco diseñado para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
+    "features": [
+      "Para asfalto fresco",
+      "Para concreto fresco",
+      "Corte de trazado"
+    ],
+    "applications": [
+      "Asfalto fresco",
+      "Concreto fresco",
+      "Juntas de expansión",
+      "Trazado de líneas"
+    ],
+    "specs": {
+      "Diámetro": "14\""
+    }
+  },
+  {
+    "id": "concrete-looping-14",
+    "sku": "26-500",
+    "name": "Disco Concreto Looping 14\" 6mm",
+    "category": "discos-diamante",
+    "description": "Disco para corte de concreto con diseño de segmento especial para mayor rendimiento.",
+    "features": [
+      "Diseño de segmento especial",
+      "Alto rendimiento",
+      "Para concreto"
+    ],
+    "applications": [
+      "Concreto",
+      "Hormigón armado",
+      "Pavimentos"
+    ],
+    "specs": {
+      "Diámetro": "14\"",
+      "Espesor": "6mm"
+    }
+  },
+  {
+    "id": "copa-desvaste",
+    "sku": "29-528",
+    "name": "Copa de Desbaste",
+    "category": "copas-desgaste",
+    "description": "Copa de diamante para desbaste y preparación de superficies de hormigón y piedra.",
+    "features": [
+      "Desbaste de superficies",
+      "Para hormigón",
+      "Alta remoción de material"
+    ],
+    "applications": [
+      "Preparación de superficies",
+      "Desbaste de hormigón",
+      "Nivelación",
+      "Remoción de recubrimientos"
+    ]
+  },
+  {
+    "id": "extension-acero-broca",
+    "sku": "300-01501",
+    "name": "Extensión de Acero para Broca",
+    "category": "accesorios",
+    "description": "Extensión de acero para aumentar el alcance de perforación con brocas diamantadas.",
+    "features": [
+      "Material: Acero",
+      "Alta resistencia",
+      "Compatible con brocas estándar"
+    ],
+    "applications": [
+      "Perforación profunda",
+      "Muros gruesos",
+      "Alcance extendido"
+    ]
+  },
+  {
+    "id": "set-kds150-dk17",
+    "sku": "KDS150-DK17",
+    "name": "Set de Perforación KDS150 + DK17",
+    "category": "maquinaria",
+    "description": "Set completo de perforación con pedestal KDS150 y motor DK17 de 2000W. Fabricado en Alemania.",
+    "features": [
+      "Made in Germany",
+      "Taladrado en ángulo 0-45°",
+      "Bajada rápida",
+      "Extracción de polvo",
+      "3 velocidades"
+    ],
+    "applications": [
+      "Perforación en hormigón",
+      "Instalaciones sanitarias",
+      "Instalaciones eléctricas",
+      "Aire acondicionado"
+    ],
+    "specs": {
+      "Motor": "DK17 - 2000W",
+      "Tensión": "230V o 110V",
+      "Ø en seco": "20 - 200mm (3/4\" - 8\")",
+      "Ø en húmedo": "20 - 150mm (3/4\" - 6\")",
+      "Velocidades": "540 / 1200 / 2520 RPM",
+      "Conexión": "1 1/4\" UNC + Adaptador G 1/2\"",
+      "Pedestal altura": "900mm / 570mm",
+      "Peso motor": "6.3 kg",
+      "Peso pedestal": "8.0 kg"
+    }
+  },
+  {
+    "id": "cortadora-kdf450",
+    "sku": "KDF450-B/H",
+    "name": "Cortadora de Suelo KDF450-B/H",
+    "category": "maquinaria",
+    "description": "Cortadora de suelo a gasolina con motor Honda GX390 Zyckon. Fabricada en Alemania para trabajos profesionales.",
+    "features": [
+      "Made in Germany",
+      "Motor Honda GX390 Zyckon",
+      "Ajuste de profundidad continuo",
+      "Depósito de agua 25L",
+      "Conducción manual"
+    ],
+    "applications": [
+      "Construcción",
+      "Ingeniería civil",
+      "Demolición",
+      "Corte de pavimentos"
+    ],
+    "specs": {
+      "Motor": "Honda GX390 Zyckon",
+      "Potencia": "8.7 kW / 11.7 CV",
+      "Disco máximo": "Ø 450mm (18\")",
+      "Velocidad": "2500 RPM",
+      "Profundidad máxima": "170mm",
+      "Eje": "Ø 25.40mm",
+      "Depósito de agua": "25 litros",
+      "Medidas": "1080 x 600 x 975mm",
+      "Peso": "100 kg"
+    }
+  },
+  {
+    "id": "cortadora-kdf500",
+    "sku": "KDF500-B/H",
+    "name": "Cortadora de Suelo KDF500-B/H",
+    "category": "maquinaria",
+    "description": "Cortadora de suelo a gasolina de mayor capacidad con contador de horas. Ideal para empresas de alquiler.",
+    "features": [
+      "Made in Germany",
+      "Motor Honda GX390 Zyckon",
+      "Contador de horas trabajadas",
+      "Ajuste de profundidad continuo",
+      "Depósito de agua 25L"
+    ],
+    "applications": [
+      "Construcción profesional",
+      "Ingeniería civil",
+      "Empresas de alquiler",
+      "Corte de pavimentos"
+    ],
+    "specs": {
+      "Motor": "Honda GX390 Zyckon",
+      "Potencia": "8.7 kW / 11.7 CV",
+      "Disco máximo": "Ø 500mm (20\")",
+      "Velocidad": "2500 RPM",
+      "Profundidad máxima": "200mm",
+      "Eje": "Ø 25.40mm",
+      "Depósito de agua": "25 litros",
+      "Medidas": "1080 x 600 x 975mm",
+      "Peso": "100 kg"
+    }
+  }
+]

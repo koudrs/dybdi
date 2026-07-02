@@ -1,0 +1,6 @@
+# Robots.txt para Discos y Brocas del Istmo
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.discosybrocasdelistmo.com/sitemap.xml
