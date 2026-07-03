@@ -1,5 +1,11 @@
 [
   {
+    "id": "todas",
+    "name": "Todas",
+    "description": "Ver todos los productos disponibles",
+    "icon": "grid"
+  },
+  {
     "id": "discos-diamante",
     "name": "Discos de Diamante",
     "description": "Discos de corte para hormigón, asfalto, porcelánicos y materiales duros",

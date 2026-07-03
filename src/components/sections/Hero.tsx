@@ -16,7 +16,7 @@ export function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero_bg.png"
+          src="/images/hero_bg.webp"
           alt="Herramientas de diamante"
           fill
           className="object-cover object-center"

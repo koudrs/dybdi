@@ -5,7 +5,9 @@ import { motion, useInView } from "framer-motion";
 import { categories, products as allProducts } from "@/data/products";
 import { ProductCard } from "@/components/products/ProductCard";
 import { cn } from "@/lib/utils";
-import { Disc, CircleDot, CupSoda, Cog, Wrench, Search, X } from "lucide-react";
+import { Disc, CircleDot, CupSoda, Cog, Wrench, Search, X, LayoutGrid, ChevronLeft, ChevronRight } from "lucide-react";
+
+const ITEMS_PER_PAGE = 12;
 
 const iconMap: Record<string, React.ElementType> = {
   disc: Disc,
@@ -13,11 +15,45 @@ const iconMap: Record<string, React.ElementType> = {
   cup: CupSoda,
   machine: Cog,
   tools: Wrench,
+  grid: LayoutGrid,
 };
 
+function shuffleWithSeed<T>(array: T[], seed: number): T[] {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor((seed * (i + 1)) % (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+    seed = (seed * 9301 + 49297) % 233280;
+  }
+  return result;
+}
+
+function getMixedProducts() {
+  const categoryOrder = ["discos-diamante", "brocas-diamante", "maquinaria", "copas-desgaste", "accesorios"];
+  const productsByCategory: Record<string, typeof allProducts> = {};
+
+  categoryOrder.forEach((cat) => {
+    productsByCategory[cat] = allProducts.filter((p) => p.category === cat);
+  });
+
+  const mixed: typeof allProducts = [];
+  let maxLength = Math.max(...Object.values(productsByCategory).map((arr) => arr.length));
+
+  for (let i = 0; i < maxLength; i++) {
+    categoryOrder.forEach((cat) => {
+      if (productsByCategory[cat][i]) {
+        mixed.push(productsByCategory[cat][i]);
+      }
+    });
+  }
+
+  return mixed;
+}
+
 export function Products() {
-  const [activeCategory, setActiveCategory] = useState<string | null>(categories[0].id);
+  const [activeCategory, setActiveCategory] = useState<string>(categories[0].id);
   const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -32,6 +68,8 @@ export function Products() {
           p.sku.toLowerCase().includes(query) ||
           p.description.toLowerCase().includes(query)
       );
+    } else if (activeCategory === "todas") {
+      results = getMixedProducts();
     } else if (activeCategory) {
       results = allProducts.filter((p) => p.category === activeCategory);
     }
@@ -39,18 +77,35 @@ export function Products() {
     return results;
   }, [searchQuery, activeCategory]);
 
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
   const handleSearch = (value: string) => {
     setSearchQuery(value);
-    if (value.trim()) {
-      setActiveCategory(null);
-    } else {
+    setCurrentPage(1);
+    if (!value.trim()) {
       setActiveCategory(categories[0].id);
     }
   };
 
   const clearSearch = () => {
     setSearchQuery("");
+    setCurrentPage(1);
     setActiveCategory(categories[0].id);
+  };
+
+  const handleCategoryChange = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    setCurrentPage(1);
+    setSearchQuery("");
+  };
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    document.getElementById("productos")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -136,7 +191,7 @@ export function Products() {
               return (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={() => handleCategoryChange(category.id)}
                   className={cn(
                     "flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300",
                     isActive
@@ -155,13 +210,13 @@ export function Products() {
 
         {/* Products grid */}
         <motion.div
-          key={searchQuery || activeCategory}
+          key={`${searchQuery || activeCategory}-${currentPage}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredProducts.map((product, index) => (
+          {paginatedProducts.map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 30 }}
@@ -188,6 +243,64 @@ export function Products() {
               Limpiar búsqueda
             </button>
           </div>
+        )}
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="flex items-center justify-center gap-2 mt-10"
+          >
+            <button
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={cn(
+                "flex items-center justify-center w-10 h-10 rounded-lg transition-all",
+                currentPage === 1
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-white border border-[#E5E5E5] text-[#1a3a5c] hover:bg-[#1a3a5c] hover:text-white"
+              )}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => goToPage(page)}
+                className={cn(
+                  "w-10 h-10 rounded-lg text-sm font-medium transition-all",
+                  currentPage === page
+                    ? "bg-[#1a3a5c] text-white shadow-lg shadow-[#1a3a5c]/20"
+                    : "bg-white border border-[#E5E5E5] text-[#737373] hover:bg-[#1a3a5c]/5 hover:text-[#1a3a5c]"
+                )}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={cn(
+                "flex items-center justify-center w-10 h-10 rounded-lg transition-all",
+                currentPage === totalPages
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-white border border-[#E5E5E5] text-[#1a3a5c] hover:bg-[#1a3a5c] hover:text-white"
+              )}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </motion.div>
+        )}
+
+        {/* Page info */}
+        {totalPages > 1 && (
+          <p className="text-center text-sm text-[#737373] mt-4">
+            Mostrando {(currentPage - 1) * ITEMS_PER_PAGE + 1}-{Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length)} de {filteredProducts.length} productos
+          </p>
         )}
       </div>
     </section>

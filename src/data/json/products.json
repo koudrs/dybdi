@@ -5,6 +5,7 @@
     "name": "Adaptador Hembra 1 1/4\" A H",
     "category": "accesorios",
     "description": "Adaptador hembra de conexión 1 1/4\" para sistemas de perforación con broca diamantada.",
+    "image": "/images/products/13-071-adaptador_hembra.webp",
     "features": [
       "Conexión 1 1/4\"",
       "Alta durabilidad",
@@ -17,14 +18,15 @@
     ]
   },
   {
-    "id": "broca-humedo-34",
+    "id": "dtox-broca-34",
     "sku": "14-207",
-    "name": "Broca de Corte Húmedo 3/4\"",
+    "name": "Broca Húmedo DBF111 3/4\"",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "image": "/images/products/dtox_broca.webp",
     "features": [
+      "Segmentos de Aro DBF111",
       "Perforación en húmedo",
-      "Corte rápido",
       "Larga duración"
     ],
     "applications": [
@@ -37,14 +39,15 @@
     }
   },
   {
-    "id": "broca-humedo-1",
+    "id": "dtox-broca-1",
     "sku": "14-209",
-    "name": "Broca de Corte Húmedo 1\"",
+    "name": "Broca Húmedo DBF111 1\"",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "image": "/images/products/dtox_broca.webp",
     "features": [
+      "Segmentos de Aro DBF111",
       "Perforación en húmedo",
-      "Corte rápido",
       "Larga duración"
     ],
     "applications": [
@@ -57,14 +60,15 @@
     }
   },
   {
-    "id": "broca-humedo-114",
+    "id": "dtox-broca-114",
     "sku": "14-227",
-    "name": "Broca de Corte Húmedo 1 1/4\"",
+    "name": "Broca Húmedo DBF111 1 1/4\"",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "image": "/images/products/dtox_broca.webp",
     "features": [
+      "Segmentos de Aro DBF111",
       "Perforación en húmedo",
-      "Corte rápido",
       "Larga duración"
     ],
     "applications": [
@@ -77,14 +81,15 @@
     }
   },
   {
-    "id": "broca-humedo-112",
+    "id": "dtox-broca-112",
     "sku": "14-232",
-    "name": "Broca de Corte Húmedo 1 1/2\"",
+    "name": "Broca Húmedo DBF111 1 1/2\"",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
+    "image": "/images/products/dtox_broca.webp",
     "features": [
+      "Segmentos de Aro DBF111",
       "Perforación en húmedo",
-      "Corte rápido",
       "Larga duración"
     ],
     "applications": [
@@ -97,11 +102,12 @@
     }
   },
   {
-    "id": "broca-humedo-2b",
+    "id": "kbw-premium-2b",
     "sku": "16-700L",
-    "name": "Broca de Corte Húmedo 2\"B",
+    "name": "Broca Húmedo KBW Premium 2\"B",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo de mayor diámetro.",
+    "description": "Broca KBW Premium para perforación en húmedo de mayor diámetro.",
+    "image": "/images/products/kbw-premiumpng.webp",
     "features": [
       "Perforación en húmedo",
       "Corte rápido",
@@ -117,11 +123,12 @@
     }
   },
   {
-    "id": "broca-humedo-25b",
+    "id": "kbw-premium-25b",
     "sku": "16-718L",
-    "name": "Broca de Corte Húmedo 2.5\"B",
+    "name": "Broca Húmedo KBW Premium 2.5\"B",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo de mayor diámetro.",
+    "description": "Broca KBW Premium para perforación en húmedo de mayor diámetro.",
+    "image": "/images/products/kbw-premiumpng.webp",
     "features": [
       "Perforación en húmedo",
       "Corte rápido",
@@ -137,11 +144,12 @@
     }
   },
   {
-    "id": "broca-humedo-3b",
+    "id": "kbw-premium-3b",
     "sku": "16-735L",
-    "name": "Broca de Corte Húmedo 3\"B",
+    "name": "Broca Húmedo KBW Premium 3\"B",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo de mayor diámetro.",
+    "description": "Broca KBW Premium para perforación en húmedo de mayor diámetro.",
+    "image": "/images/products/kbw-premiumpng.webp",
     "features": [
       "Perforación en húmedo",
       "Corte rápido",
@@ -157,11 +165,12 @@
     }
   },
   {
-    "id": "broca-humedo-4b",
+    "id": "kbw-premium-4b",
     "sku": "16-705L",
-    "name": "Broca de Corte Húmedo 4\"B",
+    "name": "Broca Húmedo KBW Premium 4\"B",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo de gran diámetro.",
+    "description": "Broca KBW Premium para perforación en húmedo de gran diámetro.",
+    "image": "/images/products/kbw-premiumpng.webp",
     "features": [
       "Perforación en húmedo",
       "Corte rápido",
@@ -177,11 +186,12 @@
     }
   },
   {
-    "id": "broca-humedo-5b",
+    "id": "kbw-premium-5b",
     "sku": "16-709L",
-    "name": "Broca de Corte Húmedo 5\"B",
+    "name": "Broca Húmedo KBW Premium 5\"B",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo de gran diámetro.",
+    "description": "Broca KBW Premium para perforación en húmedo de gran diámetro.",
+    "image": "/images/products/kbw-premiumpng.webp",
     "features": [
       "Perforación en húmedo",
       "Corte rápido",
@@ -197,11 +207,12 @@
     }
   },
   {
-    "id": "broca-humedo-8b",
+    "id": "kbw-premium-8b",
     "sku": "16-715L",
-    "name": "Broca de Corte Húmedo 8\"B",
+    "name": "Broca Húmedo KBW Premium 8\"B",
     "category": "brocas-diamante",
-    "description": "Broca de diamante para perforación en húmedo de gran diámetro.",
+    "description": "Broca KBW Premium para perforación en húmedo de gran diámetro.",
+    "image": "/images/products/kbw-premiumpng.webp",
     "features": [
       "Perforación en húmedo",
       "Corte rápido",
@@ -222,6 +233,7 @@
     "name": "C-PLUS 14\"",
     "category": "discos-diamante",
     "description": "Disco de diamante multipropósito para hormigón, piedras y albañilería. Soldadura LASER.",
+    "image": "/images/products/c-plus.webp",
     "features": [
       "Soldadura LASER",
       "Multipropósito",
@@ -242,6 +254,7 @@
     "name": "C-PLUS 18\"",
     "category": "discos-diamante",
     "description": "Disco de diamante multipropósito para hormigón, piedras y albañilería. Soldadura LASER.",
+    "image": "/images/products/c-plus.webp",
     "features": [
       "Soldadura LASER",
       "Multipropósito",
@@ -262,6 +275,7 @@
     "name": "Disco Porcelanato Extra Duro TEC-F 5\"",
     "category": "discos-diamante",
     "description": "Disco turbo para corte de porcelánicos, piedras naturales, cerámica y materiales extra duros. Corte limpio y fino.",
+    "image": "/images/products/tec-f.webp",
     "features": [
       "Corte extra fino",
       "Para materiales duros",
@@ -283,6 +297,7 @@
     "name": "Disco Porcelanato Extra Duro TEC-F 7\"",
     "category": "discos-diamante",
     "description": "Disco turbo para corte de porcelánicos, piedras naturales, cerámica y materiales extra duros. Corte limpio y fino.",
+    "image": "/images/products/tec-f.webp",
     "features": [
       "Corte extra fino",
       "Para materiales duros",
@@ -304,6 +319,7 @@
     "name": "TITAN 4\"1/2 - 115mm",
     "category": "discos-diamante",
     "description": "Disco sinterizado segmentado para hormigón, piedras y albañilería. Alta durabilidad.",
+    "image": "/images/products/super-titan.webp",
     "features": [
       "Sinterizado",
       "Segmentado",
@@ -325,6 +341,7 @@
     "name": "TITAN 7\" - 180mm",
     "category": "discos-diamante",
     "description": "Disco sinterizado segmentado para hormigón, piedras y albañilería. Alta durabilidad.",
+    "image": "/images/products/super-titan.webp",
     "features": [
       "Sinterizado",
       "Segmentado",
@@ -341,14 +358,15 @@
     }
   },
   {
-    "id": "concrete-asphalt-14",
+    "id": "laser-universal-14",
     "sku": "25-351",
-    "name": "Concreto 80% Asfalto 20% - 14\"",
+    "name": "Laser Universal 14\"",
     "category": "discos-diamante",
-    "description": "Disco especializado para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
+    "description": "Disco Laser Universal para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
+    "image": "/images/products/laser-universal.webp",
     "features": [
+      "Soldadura LASER",
       "Para concreto y asfalto",
-      "Corte combinado",
       "Alta durabilidad"
     ],
     "applications": [
@@ -361,14 +379,15 @@
     }
   },
   {
-    "id": "concrete-asphalt-18",
+    "id": "laser-universal-18",
     "sku": "25-353",
-    "name": "Concreto 80% Asfalto 20% - 18\"",
+    "name": "Laser Universal 18\"",
     "category": "discos-diamante",
-    "description": "Disco especializado para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
+    "description": "Disco Laser Universal para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
+    "image": "/images/products/laser-universal.webp",
     "features": [
+      "Soldadura LASER",
       "Para concreto y asfalto",
-      "Corte combinado",
       "Alta durabilidad"
     ],
     "applications": [
@@ -381,14 +400,15 @@
     }
   },
   {
-    "id": "asphalt-fresh-tracer-12",
+    "id": "laser-traser-12",
     "sku": "26-412",
-    "name": "Disco Asfalto y Concreto Fresco 12\"",
+    "name": "Laser Traser 12\"",
     "category": "discos-diamante",
-    "description": "Disco diseñado para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
+    "description": "Disco Laser Traser para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
+    "image": "/images/products/laser-traser.webp",
     "features": [
+      "Soldadura LASER",
       "Para asfalto fresco",
-      "Para concreto fresco",
       "Corte de trazado"
     ],
     "applications": [
@@ -402,14 +422,15 @@
     }
   },
   {
-    "id": "asphalt-fresh-tracer-14",
+    "id": "laser-traser-14",
     "sku": "26-414",
-    "name": "Disco Asfalto y Concreto Fresco 14\"",
+    "name": "Laser Traser 14\"",
     "category": "discos-diamante",
-    "description": "Disco diseñado para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
+    "description": "Disco Laser Traser para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
+    "image": "/images/products/laser-traser.webp",
     "features": [
+      "Soldadura LASER",
       "Para asfalto fresco",
-      "Para concreto fresco",
       "Corte de trazado"
     ],
     "applications": [
@@ -423,15 +444,16 @@
     }
   },
   {
-    "id": "concrete-looping-14",
+    "id": "laser-fb-uni-14",
     "sku": "26-500",
-    "name": "Disco Concreto Looping 14\" 6mm",
+    "name": "Laser FB-UNI 14\" 6mm",
     "category": "discos-diamante",
-    "description": "Disco para corte de concreto con diseño de segmento especial para mayor rendimiento.",
+    "description": "Disco Laser FB-UNI para corte de concreto con diseño de segmento especial para mayor rendimiento.",
+    "image": "/images/products/laser-fb-uni.webp",
     "features": [
+      "Soldadura LASER",
       "Diseño de segmento especial",
-      "Alto rendimiento",
-      "Para concreto"
+      "Alto rendimiento"
     ],
     "applications": [
       "Concreto",
@@ -449,6 +471,7 @@
     "name": "Copa de Desbaste",
     "category": "copas-desgaste",
     "description": "Copa de diamante para desbaste y preparación de superficies de hormigón y piedra.",
+    "image": "/images/products/copa-diamante.webp",
     "features": [
       "Desbaste de superficies",
       "Para hormigón",
@@ -467,6 +490,7 @@
     "name": "Extensión de Acero para Broca",
     "category": "accesorios",
     "description": "Extensión de acero para aumentar el alcance de perforación con brocas diamantadas.",
+    "image": "/images/products/extension_300-01501.webp",
     "features": [
       "Material: Acero",
       "Alta resistencia",
@@ -484,6 +508,7 @@
     "name": "Set de Perforación KDS150 + DK17",
     "category": "maquinaria",
     "description": "Set completo de perforación con pedestal KDS150 y motor DK17 de 2000W. Fabricado en Alemania.",
+    "image": "/images/products/KDS150.webp",
     "features": [
       "Made in Germany",
       "Taladrado en ángulo 0-45°",
@@ -515,6 +540,7 @@
     "name": "Cortadora de Suelo KDF450-B/H",
     "category": "maquinaria",
     "description": "Cortadora de suelo a gasolina con motor Honda GX390 Zyckon. Fabricada en Alemania para trabajos profesionales.",
+    "image": "/images/products/KDF450-B:H.webp",
     "features": [
       "Made in Germany",
       "Motor Honda GX390 Zyckon",
@@ -546,6 +572,7 @@
     "name": "Cortadora de Suelo KDF500-B/H",
     "category": "maquinaria",
     "description": "Cortadora de suelo a gasolina de mayor capacidad con contador de horas. Ideal para empresas de alquiler.",
+    "image": "/images/products/KDF500-B:H.webp",
     "features": [
       "Made in Germany",
       "Motor Honda GX390 Zyckon",

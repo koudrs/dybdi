@@ -30,13 +30,15 @@ export function ProductCard({ product }: ProductCardProps) {
           style={{ backfaceVisibility: "hidden" }}
         >
           {/* Image container */}
-          <div className="relative aspect-4/3 bg-linear-to-br from-[#F5F5F5] to-[#EBEBEB] overflow-hidden">
+          <div className="relative aspect-4/3 bg-white overflow-hidden">
             {product.image ? (
               <Image
                 src={product.image}
                 alt={product.name}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-contain p-4 transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
