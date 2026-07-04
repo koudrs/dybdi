@@ -36,9 +36,9 @@ export function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contacto" className="py-32 bg-white relative overflow-hidden">
+    <section id="contacto" className="py-20 lg:py-32 bg-white relative overflow-hidden">
       {/* Decorative */}
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#F5F5F5] rounded-tr-[200px]" />
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#F4F6F8] -skew-x-12 -translate-x-1/4" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
@@ -48,7 +48,7 @@ export function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-[#e87722] font-medium text-sm uppercase tracking-widest mb-4"
+              className="inline-block bg-[#1D1D1B] text-white font-heading font-bold text-xs uppercase tracking-[0.2em] px-3 py-1 mb-4"
             >
               Contacto
             </motion.span>
@@ -57,7 +57,7 @@ export function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl lg:text-5xl font-bold text-[#1a3a5c] tracking-tight leading-tight mb-6"
+              className="font-heading text-4xl lg:text-5xl font-bold text-[#1D1D1B] uppercase tracking-tight leading-[1.05] mb-6"
             >
               Hablemos de
               <br />
@@ -68,7 +68,7 @@ export function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-[#737373] text-lg leading-relaxed mb-12"
+              className="text-[#6B7280] text-lg leading-relaxed mb-12"
             >
               ¿Tienes preguntas? Escríbenos por WhatsApp y te
               responderemos a la brevedad con la mejor solución
@@ -85,22 +85,22 @@ export function Contact() {
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#F5F5F5] flex items-center justify-center">
-                    <item.icon className="h-5 w-5 text-[#1a3a5c]" />
+                  <div className="w-12 h-12 bg-[#F4F6F8] flex items-center justify-center">
+                    <item.icon className="h-5 w-5 text-[#1D1D1B]" />
                   </div>
                   <div>
-                    <p className="text-sm text-[#737373]">{item.title}</p>
+                    <p className="text-sm text-[#6B7280]">{item.title}</p>
                     {item.href ? (
                       <a
                         href={item.href === "whatsapp" ? getWhatsAppLink() : item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#1a3a5c] font-medium hover:text-[#e87722] transition-colors"
+                        className="text-[#1D1D1B] font-medium hover:text-[#1272B9] transition-colors break-all"
                       >
                         {item.details}
                       </a>
                     ) : (
-                      <p className="text-[#1a3a5c] font-medium">{item.details}</p>
+                      <p className="text-[#1D1D1B] font-medium">{item.details}</p>
                     )}
                   </div>
                 </motion.div>
@@ -115,16 +115,17 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            <div className="bg-[#1a3a5c] rounded-3xl p-10 lg:p-12 text-white relative overflow-hidden">
-              {/* Background pattern */}
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[2rem_2rem]" />
+            <div className="bg-[#1D1D1B] p-10 lg:p-12 text-white relative overflow-hidden">
+              {/* Blue chevron accent */}
+              <div className="absolute inset-y-0 -right-16 w-48 bg-[#1272B9]/20 clip-chevron" />
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#1272B9]" />
 
               <div className="relative">
-                <div className="w-16 h-16 rounded-2xl bg-[#e87722] flex items-center justify-center mb-8">
+                <div className="w-16 h-16 bg-[#1272B9] flex items-center justify-center mb-8">
                   <MessageCircle className="h-8 w-8 text-white" />
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                <h3 className="font-heading text-2xl lg:text-3xl font-bold uppercase tracking-tight mb-4">
                   Escríbenos por
                   <br />
                   WhatsApp
@@ -138,7 +139,7 @@ export function Contact() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full bg-white text-[#1a3a5c] hover:bg-white/90 rounded-lg h-14 text-base font-medium transition-all duration-300 group"
+                  className="w-full bg-[#1272B9] hover:bg-[#0D5A94] text-white rounded-sm h-14 text-base font-semibold transition-all duration-300 group"
                 >
                   <a
                     href={getQuoteWhatsAppLink()}

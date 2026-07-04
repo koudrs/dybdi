@@ -1,13 +1,223 @@
 [
   {
-    "id": "adaptador-hembra-114",
-    "sku": "13-071",
-    "name": "Adaptador Hembra 1 1/4\" A H",
-    "category": "accesorios",
-    "description": "Adaptador hembra de conexión 1 1/4\" para sistemas de perforación con broca diamantada.",
-    "image": "/images/products/13-071-adaptador_hembra.webp",
+    "id": "laser-c-plus",
+    "name": "LASER C-PLUS Multipropósito",
+    "category": "discos-diamante",
+    "description": "Disco de diamante multipropósito con soldadura LASER para hormigón, piedras de hormigón, albañilería y materiales similares.",
+    "image": "/images/products/c-plus.webp",
+    "madeInGermany": true,
     "features": [
-      "Conexión 1 1/4\"",
+      "Soldadura LASER",
+      "Multipropósito",
+      "Cortadora manual hasta 4.5 kW / Cortadora de suelo hasta 10 kW"
+    ],
+    "applications": [
+      "Hormigón",
+      "Piedras de hormigón",
+      "Albañilería y materiales similares"
+    ],
+    "variants": [
+      { "sku": "23-020", "size": "350 x 25.40 mm | 14\" x 1\"", "segment": "10 mm" },
+      { "sku": "23-022", "size": "450 x 25.40 mm | 18\" x 1\"", "segment": "10 mm" }
+    ]
+  },
+  {
+    "id": "turbo-tec-f",
+    "name": "TURBO TEC-F",
+    "category": "discos-diamante",
+    "description": "Disco turbo sinterizado continuo de corte limpio y extra fino para porcelánicos, piedras naturales y materiales duros.",
+    "image": "/images/products/tec-f.webp",
+    "madeInGermany": true,
+    "features": [
+      "Corte limpio / disco extra fino",
+      "Sinterizado",
+      "Continuo, turbo"
+    ],
+    "applications": [
+      "Porcelánicos",
+      "Piedras naturales / artificiales",
+      "Ladrillos, cerámica, hormigón",
+      "Cartón yeso, arenisca artificial dura"
+    ],
+    "variants": [
+      { "sku": "24-075", "size": "125 x 22.23 mm | 5\" x 7/8\"", "segment": "1.2 mm" },
+      { "sku": "24-077", "size": "180 x 22.23 mm | 7\" x 7/8\"", "segment": "1.6 mm" }
+    ]
+  },
+  {
+    "id": "sinter-titan",
+    "name": "SINTER TITAN",
+    "category": "discos-diamante",
+    "description": "Disco de diamante sinterizado segmentado para hormigón, piedras de hormigón, albañilería y materiales similares.",
+    "image": "/images/products/super-titan.webp",
+    "madeInGermany": true,
+    "features": [
+      "Sinterizado",
+      "Segmentado",
+      "Alta durabilidad"
+    ],
+    "applications": [
+      "Hormigón",
+      "Piedras de hormigón",
+      "Albañilería y materiales similares"
+    ],
+    "variants": [
+      { "sku": "24-141", "size": "115 x 22.23 mm | 4,5\" x 7/8\"", "segment": "10 mm" },
+      { "sku": "24-144", "size": "180 x 22.53 mm | 7\" x 7/8\"", "segment": "10 mm" }
+    ]
+  },
+  {
+    "id": "laser-universal",
+    "name": "LASER UNIVERSAL",
+    "category": "discos-diamante",
+    "description": "Disco de diamante con soldadura LASER para asfalto y hormigón. Segmentado, entalla cerrada, con segmentos de protección.",
+    "image": "/images/products/laser-universal.webp",
+    "madeInGermany": true,
+    "features": [
+      "Soldadura LASER",
+      "Segmentado, entalla cerrada",
+      "Con segmentos de protección",
+      "Cortadora de suelo hasta 10 kW"
+    ],
+    "applications": [
+      "Asfalto y hormigón",
+      "Pavimentos mixtos (80% concreto / 20% asfalto)",
+      "Obras viales"
+    ],
+    "variants": [
+      { "sku": "25-351", "size": "350 x 25.40 mm | 14\" x 1\"", "segment": "10 mm" },
+      { "sku": "25-353", "size": "450 x 25.40 mm | 18\" x 1\"", "segment": "10 mm" }
+    ]
+  },
+  {
+    "id": "laser-tracer",
+    "name": "LASER TRACER",
+    "category": "discos-diamante",
+    "description": "Disco de diamante con soldadura LASER para asfalto y concreto fresco. Segmentado, entalla cerrada, con segmentos de protección.",
+    "image": "/images/products/laser-traser.webp",
+    "madeInGermany": true,
+    "features": [
+      "Soldadura LASER",
+      "Segmentado, entalla cerrada",
+      "Con segmentos de protección",
+      "Cortadora manual hasta 4.5 kW | Cortadora de suelo hasta 10 kW"
+    ],
+    "applications": [
+      "Asfalto y materiales similares",
+      "Concreto fresco",
+      "Juntas de expansión y trazado"
+    ],
+    "variants": [
+      { "sku": "26-412", "size": "350 x 25.40 mm | 14\" x 1\"", "segment": "10 mm" },
+      { "sku": "26-414", "size": "450 x 25.40 mm | 18\" x 1\"", "segment": "10 mm" }
+    ]
+  },
+  {
+    "id": "laser-fb-uni",
+    "name": "LASER FB-UNI",
+    "category": "discos-diamante",
+    "description": "Disco de diamante con soldadura LASER para concreto y materiales similares. Segmentado, entalla abierta.",
+    "image": "/images/products/laser-fb-uni.webp",
+    "madeInGermany": true,
+    "features": [
+      "Soldadura LASER",
+      "Segmentado, entalla abierta",
+      "Cortadora de suelo hasta 10 kW"
+    ],
+    "applications": [
+      "Concreto y materiales similares",
+      "Hormigón armado",
+      "Pavimentos"
+    ],
+    "variants": [
+      { "sku": "26-500", "size": "350 x 25.40 mm | 14\" x 1\"", "segment": "6 mm" }
+    ]
+  },
+  {
+    "id": "brocas-kbw-premium",
+    "name": "Brocas de Diamante en Húmedo KBW PREMIUM",
+    "category": "brocas-diamante",
+    "description": "Brocas de diamante en húmedo KBW PREMIUM 1 ¼\" UNC con soldadura LASER y segmentos roof top. Corte muy rápido y larga duración en hormigón armado y albañilería.",
+    "image": "/images/products/kbw-premiumpng.webp",
+    "madeInGermany": true,
+    "features": [
+      "Conexión 1 ¼\" UNC",
+      "Soldadura LASER",
+      "Segmentos roof top",
+      "Corte muy rápido, larga duración",
+      "Longitud útil 450 mm"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones sanitarias y eléctricas",
+      "Aire acondicionado"
+    ],
+    "variants": [
+      { "sku": "16-700L", "size": "Ø 52 mm | 2\"", "segment": "24 x 3.5 x 10 mm" },
+      { "sku": "16-718L", "size": "Ø 65 mm | 2\" 1/2", "segment": "24 x 3.5 x 10 mm" },
+      { "sku": "16-735L", "size": "Ø 78 mm | 3\"", "segment": "24 x 3.5 x 10 mm" },
+      { "sku": "16-705L", "size": "Ø 102 mm | 4\"", "segment": "24 x 3.5 x 10 mm" },
+      { "sku": "16-709L", "size": "Ø 127 mm | 5\"", "segment": "24 x 3.5 x 10 mm" },
+      { "sku": "16-715L", "size": "Ø 200 mm | 8\"", "segment": "24 x 4.0 x 10 mm" }
+    ]
+  },
+  {
+    "id": "brocas-dbf111",
+    "name": "Brocas de Corte Húmedo con Segmentos de Aro DBF111",
+    "category": "brocas-diamante",
+    "description": "Brocas de corte húmedo con segmentos de aro DBF111 (grupo DTOX, sin cobalto) para hormigón armado y albañilería.",
+    "image": "/images/products/dtox_broca.webp",
+    "madeInGermany": true,
+    "features": [
+      "Segmentos de aro DBF111",
+      "Grupo DTOX (sin cobalto)",
+      "Perforación en húmedo",
+      "Larga duración"
+    ],
+    "applications": [
+      "Hormigón armado",
+      "Albañilería",
+      "Instalaciones sanitarias y eléctricas"
+    ],
+    "variants": [
+      { "sku": "14-207", "size": "3/4\"" },
+      { "sku": "14-209", "size": "1\"" },
+      { "sku": "14-227", "size": "1 1/4\"" },
+      { "sku": "14-232", "size": "1 1/2\"" }
+    ]
+  },
+  {
+    "id": "copas-ts-s",
+    "name": "Copas de Diamante TS-S",
+    "category": "copas-desgaste",
+    "description": "Copa de diamante sinterizada segmentada de hilera doble para desgaste de hormigón, piedra natural y artificial.",
+    "image": "/images/products/copa-diamante.webp",
+    "madeInGermany": true,
+    "features": [
+      "Hilera doble",
+      "Sinterizado",
+      "Segmentado",
+      "Eje Ø 22.23 mm"
+    ],
+    "applications": [
+      "Amoladora angular / pulidoras",
+      "Hormigón, piedra natural y artificial",
+      "Preparación de superficies"
+    ],
+    "variants": [
+      { "sku": "29-528", "size": "Ø 115 x 22.00 mm | 4,5\" x 7/8\"" }
+    ]
+  },
+  {
+    "id": "adaptador-hembra",
+    "name": "Adaptador Hembra 1 ¼\" A H",
+    "category": "accesorios",
+    "description": "Adaptador hembra de conexión 1 ¼\" para sistemas de perforación con broca diamantada.",
+    "image": "/images/products/13-071-adaptador_hembra.webp",
+    "madeInGermany": true,
+    "features": [
+      "Conexión 1 ¼\"",
       "Alta durabilidad",
       "Compatible con sistemas estándar"
     ],
@@ -15,502 +225,40 @@
       "Sistemas de perforación",
       "Conexión de brocas",
       "Equipos de perforación húmeda"
+    ],
+    "variants": [
+      { "sku": "13-071", "size": "1 1/4\" A H" }
     ]
   },
   {
-    "id": "dtox-broca-34",
-    "sku": "14-207",
-    "name": "Broca Húmedo DBF111 3/4\"",
-    "category": "brocas-diamante",
-    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
-    "image": "/images/products/dtox_broca.webp",
-    "features": [
-      "Segmentos de Aro DBF111",
-      "Perforación en húmedo",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Instalaciones eléctricas"
-    ],
-    "specs": {
-      "Diámetro": "3/4\""
-    }
-  },
-  {
-    "id": "dtox-broca-1",
-    "sku": "14-209",
-    "name": "Broca Húmedo DBF111 1\"",
-    "category": "brocas-diamante",
-    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
-    "image": "/images/products/dtox_broca.webp",
-    "features": [
-      "Segmentos de Aro DBF111",
-      "Perforación en húmedo",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Instalaciones sanitarias"
-    ],
-    "specs": {
-      "Diámetro": "1\""
-    }
-  },
-  {
-    "id": "dtox-broca-114",
-    "sku": "14-227",
-    "name": "Broca Húmedo DBF111 1 1/4\"",
-    "category": "brocas-diamante",
-    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
-    "image": "/images/products/dtox_broca.webp",
-    "features": [
-      "Segmentos de Aro DBF111",
-      "Perforación en húmedo",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Instalaciones de aire acondicionado"
-    ],
-    "specs": {
-      "Diámetro": "1 1/4\""
-    }
-  },
-  {
-    "id": "dtox-broca-112",
-    "sku": "14-232",
-    "name": "Broca Húmedo DBF111 1 1/2\"",
-    "category": "brocas-diamante",
-    "description": "Broca DTOX Segmentos de Aro DBF111 para perforación en húmedo. Ideal para hormigón armado y albañilería.",
-    "image": "/images/products/dtox_broca.webp",
-    "features": [
-      "Segmentos de Aro DBF111",
-      "Perforación en húmedo",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Tuberías"
-    ],
-    "specs": {
-      "Diámetro": "1 1/2\""
-    }
-  },
-  {
-    "id": "kbw-premium-2b",
-    "sku": "16-700L",
-    "name": "Broca Húmedo KBW Premium 2\"B",
-    "category": "brocas-diamante",
-    "description": "Broca KBW Premium para perforación en húmedo de mayor diámetro.",
-    "image": "/images/products/kbw-premiumpng.webp",
-    "features": [
-      "Perforación en húmedo",
-      "Corte rápido",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Instalaciones industriales"
-    ],
-    "specs": {
-      "Diámetro": "2\"B"
-    }
-  },
-  {
-    "id": "kbw-premium-25b",
-    "sku": "16-718L",
-    "name": "Broca Húmedo KBW Premium 2.5\"B",
-    "category": "brocas-diamante",
-    "description": "Broca KBW Premium para perforación en húmedo de mayor diámetro.",
-    "image": "/images/products/kbw-premiumpng.webp",
-    "features": [
-      "Perforación en húmedo",
-      "Corte rápido",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Instalaciones industriales"
-    ],
-    "specs": {
-      "Diámetro": "2.5\"B"
-    }
-  },
-  {
-    "id": "kbw-premium-3b",
-    "sku": "16-735L",
-    "name": "Broca Húmedo KBW Premium 3\"B",
-    "category": "brocas-diamante",
-    "description": "Broca KBW Premium para perforación en húmedo de mayor diámetro.",
-    "image": "/images/products/kbw-premiumpng.webp",
-    "features": [
-      "Perforación en húmedo",
-      "Corte rápido",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Instalaciones industriales"
-    ],
-    "specs": {
-      "Diámetro": "3\"B"
-    }
-  },
-  {
-    "id": "kbw-premium-4b",
-    "sku": "16-705L",
-    "name": "Broca Húmedo KBW Premium 4\"B",
-    "category": "brocas-diamante",
-    "description": "Broca KBW Premium para perforación en húmedo de gran diámetro.",
-    "image": "/images/products/kbw-premiumpng.webp",
-    "features": [
-      "Perforación en húmedo",
-      "Corte rápido",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Perforaciones de gran diámetro"
-    ],
-    "specs": {
-      "Diámetro": "4\"B"
-    }
-  },
-  {
-    "id": "kbw-premium-5b",
-    "sku": "16-709L",
-    "name": "Broca Húmedo KBW Premium 5\"B",
-    "category": "brocas-diamante",
-    "description": "Broca KBW Premium para perforación en húmedo de gran diámetro.",
-    "image": "/images/products/kbw-premiumpng.webp",
-    "features": [
-      "Perforación en húmedo",
-      "Corte rápido",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Perforaciones de gran diámetro"
-    ],
-    "specs": {
-      "Diámetro": "5\"B"
-    }
-  },
-  {
-    "id": "kbw-premium-8b",
-    "sku": "16-715L",
-    "name": "Broca Húmedo KBW Premium 8\"B",
-    "category": "brocas-diamante",
-    "description": "Broca KBW Premium para perforación en húmedo de gran diámetro.",
-    "image": "/images/products/kbw-premiumpng.webp",
-    "features": [
-      "Perforación en húmedo",
-      "Corte rápido",
-      "Larga duración"
-    ],
-    "applications": [
-      "Hormigón armado",
-      "Albañilería",
-      "Perforaciones de gran diámetro"
-    ],
-    "specs": {
-      "Diámetro": "8\"B"
-    }
-  },
-  {
-    "id": "cplus-14",
-    "sku": "23-020",
-    "name": "C-PLUS 14\"",
-    "category": "discos-diamante",
-    "description": "Disco de diamante multipropósito para hormigón, piedras y albañilería. Soldadura LASER.",
-    "image": "/images/products/c-plus.webp",
-    "features": [
-      "Soldadura LASER",
-      "Multipropósito",
-      "Alta durabilidad"
-    ],
-    "applications": [
-      "Hormigón",
-      "Piedras de hormigón",
-      "Albañilería"
-    ],
-    "specs": {
-      "Diámetro": "14\""
-    }
-  },
-  {
-    "id": "cplus-18",
-    "sku": "23-022",
-    "name": "C-PLUS 18\"",
-    "category": "discos-diamante",
-    "description": "Disco de diamante multipropósito para hormigón, piedras y albañilería. Soldadura LASER.",
-    "image": "/images/products/c-plus.webp",
-    "features": [
-      "Soldadura LASER",
-      "Multipropósito",
-      "Alta durabilidad"
-    ],
-    "applications": [
-      "Hormigón",
-      "Piedras de hormigón",
-      "Albañilería"
-    ],
-    "specs": {
-      "Diámetro": "18\""
-    }
-  },
-  {
-    "id": "very-hard-tiles-tec-f-5",
-    "sku": "24-075",
-    "name": "Disco Porcelanato Extra Duro TEC-F 5\"",
-    "category": "discos-diamante",
-    "description": "Disco turbo para corte de porcelánicos, piedras naturales, cerámica y materiales extra duros. Corte limpio y fino.",
-    "image": "/images/products/tec-f.webp",
-    "features": [
-      "Corte extra fino",
-      "Para materiales duros",
-      "Acabado limpio"
-    ],
-    "applications": [
-      "Porcelánicos",
-      "Piedras naturales",
-      "Cerámica",
-      "Materiales extra duros"
-    ],
-    "specs": {
-      "Diámetro": "5\""
-    }
-  },
-  {
-    "id": "very-hard-tiles-tec-f-7",
-    "sku": "24-077",
-    "name": "Disco Porcelanato Extra Duro TEC-F 7\"",
-    "category": "discos-diamante",
-    "description": "Disco turbo para corte de porcelánicos, piedras naturales, cerámica y materiales extra duros. Corte limpio y fino.",
-    "image": "/images/products/tec-f.webp",
-    "features": [
-      "Corte extra fino",
-      "Para materiales duros",
-      "Acabado limpio"
-    ],
-    "applications": [
-      "Porcelánicos",
-      "Piedras naturales",
-      "Cerámica",
-      "Materiales extra duros"
-    ],
-    "specs": {
-      "Diámetro": "7\""
-    }
-  },
-  {
-    "id": "titan-412",
-    "sku": "24-141",
-    "name": "TITAN 4\"1/2 - 115mm",
-    "category": "discos-diamante",
-    "description": "Disco sinterizado segmentado para hormigón, piedras y albañilería. Alta durabilidad.",
-    "image": "/images/products/super-titan.webp",
-    "features": [
-      "Sinterizado",
-      "Segmentado",
-      "Alta durabilidad"
-    ],
-    "applications": [
-      "Hormigón",
-      "Piedras de hormigón",
-      "Albañilería"
-    ],
-    "specs": {
-      "Diámetro": "4\"1/2 (115mm)",
-      "Alto segmento": "10mm"
-    }
-  },
-  {
-    "id": "titan-7",
-    "sku": "24-144",
-    "name": "TITAN 7\" - 180mm",
-    "category": "discos-diamante",
-    "description": "Disco sinterizado segmentado para hormigón, piedras y albañilería. Alta durabilidad.",
-    "image": "/images/products/super-titan.webp",
-    "features": [
-      "Sinterizado",
-      "Segmentado",
-      "Alta durabilidad"
-    ],
-    "applications": [
-      "Hormigón",
-      "Piedras de hormigón",
-      "Albañilería"
-    ],
-    "specs": {
-      "Diámetro": "7\" (180mm)",
-      "Alto segmento": "10mm"
-    }
-  },
-  {
-    "id": "laser-universal-14",
-    "sku": "25-351",
-    "name": "Laser Universal 14\"",
-    "category": "discos-diamante",
-    "description": "Disco Laser Universal para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
-    "image": "/images/products/laser-universal.webp",
-    "features": [
-      "Soldadura LASER",
-      "Para concreto y asfalto",
-      "Alta durabilidad"
-    ],
-    "applications": [
-      "Pavimentos mixtos",
-      "Concreto con asfalto",
-      "Trabajos de reparación"
-    ],
-    "specs": {
-      "Diámetro": "14\""
-    }
-  },
-  {
-    "id": "laser-universal-18",
-    "sku": "25-353",
-    "name": "Laser Universal 18\"",
-    "category": "discos-diamante",
-    "description": "Disco Laser Universal para corte combinado de concreto y asfalto. Ideal para pavimentos mixtos.",
-    "image": "/images/products/laser-universal.webp",
-    "features": [
-      "Soldadura LASER",
-      "Para concreto y asfalto",
-      "Alta durabilidad"
-    ],
-    "applications": [
-      "Pavimentos mixtos",
-      "Concreto con asfalto",
-      "Trabajos de reparación"
-    ],
-    "specs": {
-      "Diámetro": "18\""
-    }
-  },
-  {
-    "id": "laser-traser-12",
-    "sku": "26-412",
-    "name": "Laser Traser 12\"",
-    "category": "discos-diamante",
-    "description": "Disco Laser Traser para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
-    "image": "/images/products/laser-traser.webp",
-    "features": [
-      "Soldadura LASER",
-      "Para asfalto fresco",
-      "Corte de trazado"
-    ],
-    "applications": [
-      "Asfalto fresco",
-      "Concreto fresco",
-      "Juntas de expansión",
-      "Trazado de líneas"
-    ],
-    "specs": {
-      "Diámetro": "12\""
-    }
-  },
-  {
-    "id": "laser-traser-14",
-    "sku": "26-414",
-    "name": "Laser Traser 14\"",
-    "category": "discos-diamante",
-    "description": "Disco Laser Traser para corte de asfalto y concreto fresco. Ideal para trabajos de trazado y juntas.",
-    "image": "/images/products/laser-traser.webp",
-    "features": [
-      "Soldadura LASER",
-      "Para asfalto fresco",
-      "Corte de trazado"
-    ],
-    "applications": [
-      "Asfalto fresco",
-      "Concreto fresco",
-      "Juntas de expansión",
-      "Trazado de líneas"
-    ],
-    "specs": {
-      "Diámetro": "14\""
-    }
-  },
-  {
-    "id": "laser-fb-uni-14",
-    "sku": "26-500",
-    "name": "Laser FB-UNI 14\" 6mm",
-    "category": "discos-diamante",
-    "description": "Disco Laser FB-UNI para corte de concreto con diseño de segmento especial para mayor rendimiento.",
-    "image": "/images/products/laser-fb-uni.webp",
-    "features": [
-      "Soldadura LASER",
-      "Diseño de segmento especial",
-      "Alto rendimiento"
-    ],
-    "applications": [
-      "Concreto",
-      "Hormigón armado",
-      "Pavimentos"
-    ],
-    "specs": {
-      "Diámetro": "14\"",
-      "Espesor": "6mm"
-    }
-  },
-  {
-    "id": "copa-desvaste",
-    "sku": "29-528",
-    "name": "Copa de Desbaste",
-    "category": "copas-desgaste",
-    "description": "Copa de diamante para desbaste y preparación de superficies de hormigón y piedra.",
-    "image": "/images/products/copa-diamante.webp",
-    "features": [
-      "Desbaste de superficies",
-      "Para hormigón",
-      "Alta remoción de material"
-    ],
-    "applications": [
-      "Preparación de superficies",
-      "Desbaste de hormigón",
-      "Nivelación",
-      "Remoción de recubrimientos"
-    ]
-  },
-  {
-    "id": "extension-acero-broca",
-    "sku": "300-01501",
-    "name": "Extensión de Acero para Broca",
+    "id": "alargo-acero",
+    "name": "Alargo de Acero para Broca",
     "category": "accesorios",
-    "description": "Extensión de acero para aumentar el alcance de perforación con brocas diamantadas.",
+    "description": "Alargo de acero 1 ¼\" UNC para aumentar el alcance de perforación con brocas diamantadas.",
     "image": "/images/products/extension_300-01501.webp",
+    "madeInGermany": true,
     "features": [
       "Material: Acero",
-      "Alta resistencia",
-      "Compatible con brocas estándar"
+      "Conexión 1 ¼\" UNC",
+      "Alta resistencia"
     ],
     "applications": [
       "Perforación profunda",
       "Muros gruesos",
       "Alcance extendido"
+    ],
+    "variants": [
+      { "sku": "300-01501", "size": "300 mm | 12\"" }
     ]
   },
   {
     "id": "set-kds150-dk17",
-    "sku": "KDS150-DK17",
     "name": "Set de Perforación KDS150 + DK17",
     "category": "maquinaria",
     "description": "Set completo de perforación con pedestal KDS150 y motor DK17 de 2000W. Fabricado en Alemania.",
     "image": "/images/products/KDS150.webp",
+    "madeInGermany": true,
     "features": [
-      "Made in Germany",
       "Taladrado en ángulo 0-45°",
       "Bajada rápida",
       "Extracción de polvo",
@@ -532,17 +280,19 @@
       "Pedestal altura": "900mm / 570mm",
       "Peso motor": "6.3 kg",
       "Peso pedestal": "8.0 kg"
-    }
+    },
+    "variants": [
+      { "sku": "KDS150-DK17", "size": "Set completo" }
+    ]
   },
   {
     "id": "cortadora-kdf450",
-    "sku": "KDF450-B/H",
     "name": "Cortadora de Suelo KDF450-B/H",
     "category": "maquinaria",
     "description": "Cortadora de suelo a gasolina con motor Honda GX390 Zyckon. Fabricada en Alemania para trabajos profesionales.",
     "image": "/images/products/KDF450-B:H.webp",
+    "madeInGermany": true,
     "features": [
-      "Made in Germany",
       "Motor Honda GX390 Zyckon",
       "Ajuste de profundidad continuo",
       "Depósito de agua 25L",
@@ -564,17 +314,19 @@
       "Depósito de agua": "25 litros",
       "Medidas": "1080 x 600 x 975mm",
       "Peso": "100 kg"
-    }
+    },
+    "variants": [
+      { "sku": "KDF450-B/H", "size": "Disco máx. Ø 450 mm | 18\"" }
+    ]
   },
   {
     "id": "cortadora-kdf500",
-    "sku": "KDF500-B/H",
     "name": "Cortadora de Suelo KDF500-B/H",
     "category": "maquinaria",
     "description": "Cortadora de suelo a gasolina de mayor capacidad con contador de horas. Ideal para empresas de alquiler.",
     "image": "/images/products/KDF500-B:H.webp",
+    "madeInGermany": true,
     "features": [
-      "Made in Germany",
       "Motor Honda GX390 Zyckon",
       "Contador de horas trabajadas",
       "Ajuste de profundidad continuo",
@@ -596,6 +348,9 @@
       "Depósito de agua": "25 litros",
       "Medidas": "1080 x 600 x 975mm",
       "Peso": "100 kg"
-    }
+    },
+    "variants": [
+      { "sku": "KDF500-B/H", "size": "Disco máx. Ø 500 mm | 20\"" }
+    ]
   }
 ]

@@ -44,21 +44,26 @@ src/
     └── images/             # Logo y recursos
 ```
 
-## Paleta de Colores (del logo)
+## Identidad Visual (marca KERN-DEUDIAM)
 
-- Navy: `#1a3a5c` (primario)
-- Blue Brand: `#2d6aa0`
-- Orange Brand: `#e87722` (acento)
-- Steel: `#6b7280`
+El cliente es distribuidor autorizado de KERN-DEUDIAM® en Panamá. El diseño sigue el estilo del sitio y catálogo oficial (https://kern-deudiam.com/):
+
+- KD Blue: `#1272B9` (primario)
+- KD Blue Dark: `#0D5A94`
+- KD Black: `#1D1D1B`
+- Gray: `#6B7280`, Gray Light: `#F4F6F8`
+- Tipografía headings: Oswald (condensada, uppercase) vía `--font-heading`
+- Estilo: esquinas rectas (radius mínimo), chevrones azules angulares (`.clip-chevron`), tablas de variantes estilo catálogo
+- Referencias de marca en `elementos/` (catálogo PDF oficial, logos)
 
 ## Datos de Productos
 
 Los productos y categorías se gestionan en archivos JSON en `src/data/json/`:
 
 - `categories.json`: Categorías de productos
-- `products.json`: Lista de productos con specs
+- `products.json`: Líneas de producto agrupadas; cada línea tiene `variants[]` con `{ sku, size, segment? }` (código + medida, como el catálogo oficial)
 
-Para agregar productos, editar el JSON correspondiente.
+Para agregar modelos/medidas, agregar variantes a la línea correspondiente en el JSON.
 
 ## Contacto
 

@@ -1,9 +1,14 @@
 import categoriesData from "./json/categories.json";
 import productsData from "./json/products.json";
 
+export interface ProductVariant {
+  sku: string;
+  size: string;
+  segment?: string;
+}
+
 export interface Product {
   id: string;
-  sku: string;
   name: string;
   category: string;
   description: string;
@@ -11,6 +16,8 @@ export interface Product {
   applications: string[];
   specs?: Record<string, string>;
   image?: string;
+  madeInGermany?: boolean;
+  variants: ProductVariant[];
 }
 
 export interface Category {
@@ -21,7 +28,7 @@ export interface Category {
 }
 
 export const categories: Category[] = categoriesData as Category[];
-export const products: Product[] = productsData as Product[];
+export const products: Product[] = productsData as unknown as Product[];
 
 export function getProductsByCategory(categoryId: string): Product[] {
   return products.filter((p) => p.category === categoryId);

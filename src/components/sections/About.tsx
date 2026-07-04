@@ -33,9 +33,9 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="nosotros" className="py-32 bg-white relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#F5F5F5] -skew-x-12 translate-x-1/4" />
+    <section id="nosotros" className="py-20 lg:py-32 bg-white relative overflow-hidden">
+      {/* Decorative chevron edge */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#F4F6F8] -skew-x-12 translate-x-1/4" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -45,7 +45,7 @@ export function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-[#e87722] font-medium text-sm uppercase tracking-widest mb-4"
+              className="inline-block bg-[#1D1D1B] text-white font-heading font-bold text-xs uppercase tracking-[0.2em] px-3 py-1 mb-4"
             >
               Sobre Nosotros
             </motion.span>
@@ -54,25 +54,26 @@ export function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl lg:text-5xl font-bold text-[#1a3a5c] tracking-tight leading-tight mb-6"
+              className="font-heading text-4xl lg:text-5xl font-bold text-[#1D1D1B] uppercase tracking-tight leading-[1.05] mb-6"
             >
-              Tu socio en
+              Representantes
               <br />
-              herramientas de
+              <span className="text-[#1272B9]">KERN-DEUDIAM®</span>
               <br />
-              <span className="text-[#e87722]">diamante</span>
+              en Panamá
             </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-[#737373] text-lg leading-relaxed mb-8"
+              className="text-[#6B7280] text-lg leading-relaxed mb-8"
             >
-              En Discos y Brocas del Istmo somos distribuidores autorizados
-              de herramientas de diamante premium. Trabajamos con las mejores
-              marcas alemanas para ofrecer productos de la más alta calidad
-              a profesionales de la construcción en Panamá.
+              En Discos y Brocas del Istmo somos distribuidores autorizados de
+              KERN-DEUDIAM®, empresa familiar alemana que desde 1977 desarrolla
+              y produce herramientas diamantadas y maquinaria para usuarios
+              profesionales del sector de la construcción. Calidad
+              "Made in Germany" para los profesionales de Panamá.
             </motion.p>
 
             <motion.div
@@ -81,12 +82,12 @@ export function About() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-wrap gap-3"
             >
-              {["+45 años", "Made in Germany", "ISO 9001"].map((tag, index) => (
+              {["Desde 1977", "Made in Germany", "ISO 9001:2015"].map((tag, index) => (
                 <span
                   key={index}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#F5F5F5] text-sm font-medium text-[#1a3a5c]"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#F4F6F8] font-heading text-sm font-semibold uppercase tracking-wide text-[#1D1D1B]"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#e87722]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1272B9]" />
                   {tag}
                 </span>
               ))}
@@ -101,15 +102,15 @@ export function About() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                className="group p-6 bg-white rounded-2xl border border-[#E5E5E5] hover:border-[#e87722]/30 hover:shadow-xl hover:shadow-[#1a3a5c]/5 transition-all duration-500"
+                className="group p-6 bg-white border border-[#E4E7EB] hover:border-[#1272B9]/40 hover:shadow-xl hover:shadow-[#1272B9]/5 transition-all duration-500"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#1a3a5c] flex items-center justify-center mb-4 group-hover:bg-[#e87722] transition-colors duration-300">
+                <div className="w-12 h-12 bg-[#1D1D1B] flex items-center justify-center mb-4 group-hover:bg-[#1272B9] transition-colors duration-300">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-[#1a3a5c] mb-2">
+                <h3 className="font-heading text-lg font-bold text-[#1D1D1B] uppercase tracking-tight mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-[#737373] text-sm leading-relaxed">
+                <p className="text-[#6B7280] text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>

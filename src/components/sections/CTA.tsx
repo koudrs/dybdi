@@ -11,15 +11,10 @@ export function CTA() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 bg-[#1a3a5c] relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#e87722]/10 rounded-lg blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/5 rounded-lg blur-3xl" />
-      </div>
-
-      {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[4rem_4rem]" />
+    <section className="py-20 lg:py-32 bg-[#1D1D1B] relative overflow-hidden">
+      {/* Chevron decorations (catalog style) */}
+      <div className="absolute inset-y-0 -left-24 w-96 bg-[#1272B9]/15 clip-chevron hidden md:block" />
+      <div className="absolute inset-y-0 right-0 w-72 bg-white/5 clip-corner hidden md:block" />
 
       <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center" ref={ref}>
         <motion.div
@@ -27,8 +22,8 @@ export function CTA() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 border border-white/10 mb-8">
-            <MessageCircle className="h-4 w-4 text-[#e87722]" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/15 mb-8">
+            <MessageCircle className="h-4 w-4 text-[#3D93D4]" />
             <span className="text-sm font-medium text-white/90">
               Respuesta en menos de 1 hora
             </span>
@@ -39,7 +34,7 @@ export function CTA() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6"
+          className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight leading-[1.05] mb-6"
         >
           ¿Listo para comenzar
           <br />
@@ -50,7 +45,7 @@ export function CTA() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-12"
+          className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-12"
         >
           Contáctanos ahora y recibe asesoría personalizada sobre
           las mejores herramientas para tu trabajo.
@@ -65,7 +60,7 @@ export function CTA() {
           <Button
             asChild
             size="lg"
-            className="bg-[#e87722] hover:bg-[#d06a1d] text-white rounded-lg px-8 h-14 text-base font-medium transition-all duration-300 hover:shadow-xl hover:shadow-[#e87722]/30 hover:-translate-y-0.5"
+            className="bg-[#1272B9] hover:bg-[#0D5A94] text-white rounded-sm px-8 h-14 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
           >
             <a
               href={getQuoteWhatsAppLink()}
@@ -82,7 +77,7 @@ export function CTA() {
             asChild
             size="lg"
             variant="ghost"
-            className="text-white hover:bg-white/10 rounded-lg px-8 h-14 text-base font-medium border border-white/20"
+            className="text-white hover:bg-white/10 rounded-sm px-8 h-14 text-base font-semibold border-2 border-white/40"
           >
             <a
               href={getQuoteWhatsAppLink()}
@@ -99,12 +94,12 @@ export function CTA() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 text-white/50 text-sm"
+          className="mt-16 flex flex-wrap justify-center gap-8 text-white/60 text-sm"
         >
           {["Respuesta rápida", "Asesoría técnica", "Sin compromiso"].map(
             (item, index) => (
               <div key={index} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#e87722]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1272B9]" />
                 {item}
               </div>
             )

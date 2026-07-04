@@ -18,16 +18,6 @@ const iconMap: Record<string, React.ElementType> = {
   grid: LayoutGrid,
 };
 
-function shuffleWithSeed<T>(array: T[], seed: number): T[] {
-  const result = [...array];
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor((seed * (i + 1)) % (i + 1));
-    [result[i], result[j]] = [result[j], result[i]];
-    seed = (seed * 9301 + 49297) % 233280;
-  }
-  return result;
-}
-
 function getMixedProducts() {
   const categoryOrder = ["discos-diamante", "brocas-diamante", "maquinaria", "copas-desgaste", "accesorios"];
   const productsByCategory: Record<string, typeof allProducts> = {};
@@ -37,7 +27,7 @@ function getMixedProducts() {
   });
 
   const mixed: typeof allProducts = [];
-  let maxLength = Math.max(...Object.values(productsByCategory).map((arr) => arr.length));
+  const maxLength = Math.max(...Object.values(productsByCategory).map((arr) => arr.length));
 
   for (let i = 0; i < maxLength; i++) {
     categoryOrder.forEach((cat) => {
@@ -65,8 +55,12 @@ export function Products() {
       results = allProducts.filter(
         (p) =>
           p.name.toLowerCase().includes(query) ||
-          p.sku.toLowerCase().includes(query) ||
-          p.description.toLowerCase().includes(query)
+          p.description.toLowerCase().includes(query) ||
+          p.variants.some(
+            (v) =>
+              v.sku.toLowerCase().includes(query) ||
+              v.size.toLowerCase().includes(query)
+          )
       );
     } else if (activeCategory === "todas") {
       results = getMixedProducts();
@@ -109,38 +103,47 @@ export function Products() {
   };
 
   return (
-    <section id="productos" className="py-24 lg:py-32 bg-[#FAFAFA] relative">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#E5E5E5_1px,transparent_1px),linear-gradient(to_bottom,#E5E5E5_1px,transparent_1px)] bg-size-[6rem_6rem] opacity-30" />
-
+    <section id="productos" className="py-20 lg:py-32 bg-[#F4F6F8] relative">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={ref}>
-        {/* Header */}
+        {/* Header - catalog style */}
         <div className="max-w-2xl mb-10">
-          <motion.span
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-[#e87722] font-medium text-sm uppercase tracking-widest mb-4"
+            className="flex items-center gap-3 mb-4"
           >
-            Catálogo
-          </motion.span>
+            <span className="inline-block bg-[#1D1D1B] text-white font-heading font-bold text-xs uppercase tracking-[0.2em] px-3 py-1">
+              Catálogo
+            </span>
+            <span className="text-[#6B7280] text-xs font-semibold uppercase tracking-widest">
+              KERN-DEUDIAM®
+            </span>
+          </motion.div>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl lg:text-5xl font-bold text-[#1a3a5c] tracking-tight mb-4"
+            className="font-heading text-4xl lg:text-5xl font-bold text-[#1D1D1B] uppercase tracking-tight mb-4"
           >
-            Nuestros productos
+            Nuestros Productos
           </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={isInView ? { opacity: 1, scaleX: 1 } : {}}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="h-1 w-24 bg-[#1272B9] origin-left mb-5"
+          />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#737373] text-base lg:text-lg"
+            className="text-[#6B7280] text-base lg:text-lg"
           >
-            Herramientas profesionales de diamante para corte, perforación y desbaste.
+            Líneas de producto con todos sus modelos y medidas disponibles. Consulte por código directamente por WhatsApp.
           </motion.p>
         </div>
 
@@ -152,25 +155,25 @@ export function Products() {
           className="mb-6"
         >
           <div className="relative max-w-md">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-[#737373]" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-[#6B7280]" />
             <input
               type="text"
-              placeholder="Buscar por nombre o SKU..."
+              placeholder="Buscar por nombre, código o medida..."
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
-              className="w-full h-12 pl-12 pr-12 rounded-lg border border-[#E5E5E5] bg-white text-[#1a3a5c] placeholder:text-[#737373]/60 focus:outline-none focus:ring-2 focus:ring-[#1a3a5c]/20 focus:border-[#1a3a5c] transition-all"
+              className="w-full h-12 pl-12 pr-12 border border-[#E4E7EB] bg-white text-[#1D1D1B] placeholder:text-[#6B7280]/60 focus:outline-none focus:ring-2 focus:ring-[#1272B9]/30 focus:border-[#1272B9] transition-all"
             />
             {searchQuery && (
               <button
                 onClick={clearSearch}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-gray-100 transition-colors"
               >
-                <X className="h-4 w-4 text-[#737373]" />
+                <X className="h-4 w-4 text-[#6B7280]" />
               </button>
             )}
           </div>
           {searchQuery && (
-            <p className="mt-2 text-sm text-[#737373]">
+            <p className="mt-2 text-sm text-[#6B7280]">
               {filteredProducts.length} resultado{filteredProducts.length !== 1 ? "s" : ""} para "{searchQuery}"
             </p>
           )}
@@ -193,10 +196,10 @@ export function Products() {
                   key={category.id}
                   onClick={() => handleCategoryChange(category.id)}
                   className={cn(
-                    "flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300",
+                    "flex items-center gap-2 px-4 py-2.5 font-heading text-sm font-semibold uppercase tracking-wide transition-all duration-300",
                     isActive
-                      ? "bg-[#1a3a5c] text-white shadow-lg shadow-[#1a3a5c]/20"
-                      : "bg-white text-[#737373] hover:bg-[#1a3a5c]/5 hover:text-[#1a3a5c] border border-[#E5E5E5]"
+                      ? "bg-[#1272B9] text-white shadow-lg shadow-[#1272B9]/20"
+                      : "bg-white text-[#6B7280] hover:text-[#1272B9] border border-[#E4E7EB] hover:border-[#1272B9]/40"
                   )}
                 >
                   <Icon className="h-4 w-4" />
@@ -214,7 +217,7 @@ export function Products() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start"
         >
           {paginatedProducts.map((product, index) => (
             <motion.div
@@ -230,15 +233,15 @@ export function Products() {
 
         {filteredProducts.length === 0 && (
           <div className="text-center py-16">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#1a3a5c]/5 flex items-center justify-center">
-              <Search className="h-8 w-8 text-[#1a3a5c]/40" />
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#1272B9]/5 flex items-center justify-center">
+              <Search className="h-8 w-8 text-[#1272B9]/40" />
             </div>
-            <p className="text-[#737373] mb-2">
+            <p className="text-[#6B7280] mb-2">
               No se encontraron productos.
             </p>
             <button
               onClick={clearSearch}
-              className="text-[#e87722] font-medium text-sm hover:underline"
+              className="text-[#1272B9] font-medium text-sm hover:underline"
             >
               Limpiar búsqueda
             </button>
@@ -257,10 +260,10 @@ export function Products() {
               onClick={() => goToPage(currentPage - 1)}
               disabled={currentPage === 1}
               className={cn(
-                "flex items-center justify-center w-10 h-10 rounded-lg transition-all",
+                "flex items-center justify-center w-10 h-10 transition-all",
                 currentPage === 1
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "bg-white border border-[#E5E5E5] text-[#1a3a5c] hover:bg-[#1a3a5c] hover:text-white"
+                  : "bg-white border border-[#E4E7EB] text-[#1D1D1B] hover:bg-[#1272B9] hover:text-white"
               )}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -271,10 +274,10 @@ export function Products() {
                 key={page}
                 onClick={() => goToPage(page)}
                 className={cn(
-                  "w-10 h-10 rounded-lg text-sm font-medium transition-all",
+                  "w-10 h-10 font-heading text-sm font-semibold transition-all",
                   currentPage === page
-                    ? "bg-[#1a3a5c] text-white shadow-lg shadow-[#1a3a5c]/20"
-                    : "bg-white border border-[#E5E5E5] text-[#737373] hover:bg-[#1a3a5c]/5 hover:text-[#1a3a5c]"
+                    ? "bg-[#1272B9] text-white shadow-lg shadow-[#1272B9]/20"
+                    : "bg-white border border-[#E4E7EB] text-[#6B7280] hover:text-[#1272B9] hover:border-[#1272B9]/40"
                 )}
               >
                 {page}
@@ -285,10 +288,10 @@ export function Products() {
               onClick={() => goToPage(currentPage + 1)}
               disabled={currentPage === totalPages}
               className={cn(
-                "flex items-center justify-center w-10 h-10 rounded-lg transition-all",
+                "flex items-center justify-center w-10 h-10 transition-all",
                 currentPage === totalPages
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "bg-white border border-[#E5E5E5] text-[#1a3a5c] hover:bg-[#1a3a5c] hover:text-white"
+                  : "bg-white border border-[#E4E7EB] text-[#1D1D1B] hover:bg-[#1272B9] hover:text-white"
               )}
             >
               <ChevronRight className="h-5 w-5" />
@@ -298,8 +301,8 @@ export function Products() {
 
         {/* Page info */}
         {totalPages > 1 && (
-          <p className="text-center text-sm text-[#737373] mt-4">
-            Mostrando {(currentPage - 1) * ITEMS_PER_PAGE + 1}-{Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length)} de {filteredProducts.length} productos
+          <p className="text-center text-sm text-[#6B7280] mt-4">
+            Mostrando {(currentPage - 1) * ITEMS_PER_PAGE + 1}-{Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length)} de {filteredProducts.length} líneas de producto
           </p>
         )}
       </div>
