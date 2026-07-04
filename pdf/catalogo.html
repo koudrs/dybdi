@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Catálogo Discos y Brocas del Istmo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --kd-blue: #1272B9;
+    --kd-blue-dark: #0D5A94;
+    --kd-black: #1D1D1B;
+    --gray: #6B7280;
+    --gray-light: #F4F6F8;
+    --border: #E4E7EB;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { font-family: 'Inter', sans-serif; color: var(--kd-black); }
+  @page { size: A4; margin: 0; }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    background: #fff;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  h1, h2, h3, .heading { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+
+  /* ============ COVER ============ */
+  .cover-chevron {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 50%;
+    clip-path: polygon(0 0, 55% 0, 100% 50%, 55% 100%, 0 100%);
+    background: var(--kd-blue);
+  }
+  .cover-chevron img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.22;
+    mix-blend-mode: luminosity;
+  }
+  .cover-chevron .tint { position: absolute; inset: 0; background: rgba(18,114,185,0.35); }
+
+  .cover-logo {
+    position: absolute; top: 14mm; right: 14mm;
+    text-align: right;
+  }
+  .cover-logo img { height: 20mm; }
+
+  .cover-title {
+    position: absolute;
+    right: 14mm; top: 118mm;
+    width: 86mm;
+    text-align: right;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--kd-black);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 11pt;
+    padding: 2mm 5mm;
+  }
+  .cover-title h1 {
+    font-size: 29pt;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-top: 6mm;
+    color: var(--kd-black);
+  }
+  .cover-title h1 .y { color: var(--kd-blue); }
+  .cover-title .sub {
+    margin-top: 5mm;
+    font-size: 10.5pt;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+  .cover-title .sub strong { color: var(--kd-black); }
+
+  .cover-year {
+    position: absolute; right: 14mm; top: 96mm;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15pt;
+    letter-spacing: 0.35em;
+    color: var(--kd-blue);
+    text-transform: uppercase;
+  }
+
+  .cover-tags { position: absolute; right: 14mm; top: 196mm; }
+  .cover-tags span {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 8.5pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 1.8mm 4mm;
+    margin-left: 2.5mm;
+  }
+  .tag-solid { background: var(--kd-blue); color: #fff; }
+  .tag-line { border: 0.5mm solid var(--kd-black); color: var(--kd-black); }
+
+  .cover-strip {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: var(--kd-black);
+    color: #fff;
+    padding: 6mm 14mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9pt;
+  }
+  .cover-strip .accent { color: #3D93D4; font-weight: 600; }
+  .cover-strip-top {
+    position: absolute; bottom: 24mm; left: 0; right: 0;
+    height: 1.6mm; background: var(--kd-blue);
+  }
+
+  /* ============ CONTENT PAGES ============ */
+  .page-header {
+    padding: 12mm 14mm 0 14mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .page-header .title h2 { font-size: 21pt; font-weight: 700; line-height: 1; }
+  .page-header .title .bar { width: 24mm; height: 1.4mm; background: var(--kd-blue); margin-top: 2.5mm; }
+  .page-header .title .cat-sub {
+    margin-top: 2.5mm; font-size: 8pt; color: var(--gray);
+    text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;
+  }
+  .page-header .logos { display: flex; flex-direction: column; align-items: flex-end; gap: 3mm; }
+  .page-header img.mini-logo { height: 11mm; }
+  .page-header img.kd-logo { height: 8mm; }
+
+  .page-body { padding: 8mm 14mm 0 14mm; }
+
+  .page-footer {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    border-top: 0.4mm solid var(--border);
+    padding: 4mm 14mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    color: var(--gray);
+    background: #fff;
+  }
+  .page-footer .pg { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--kd-black); }
+
+  /* Product cards grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm; }
+
+  .product {
+    border: 0.4mm solid var(--border);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .product .img-wrap {
+    position: relative;
+    height: 34mm;
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 0.4mm solid var(--border);
+    padding: 3mm;
+  }
+  .product .img-wrap img { max-height: 100%; max-width: 100%; object-fit: contain; }
+  .mig { display: none; }
+  .product .info { padding: 3mm 3.5mm 3.5mm 3.5mm; flex: 1; }
+  .product h3 { font-size: 10.5pt; font-weight: 600; line-height: 1.1; margin-bottom: 1.5mm; }
+  .product .desc { font-size: 7pt; color: var(--gray); line-height: 1.45; margin-bottom: 2.5mm; }
+
+  table.variants { width: 100%; border-collapse: collapse; font-size: 6.8pt; }
+  table.variants th {
+    background: var(--kd-black); color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+    text-align: left; padding: 1.4mm 2mm;
+  }
+  table.variants td { padding: 1.2mm 2mm; border-bottom: 0.3mm solid var(--border); }
+  table.variants tr:nth-child(even) td { background: var(--gray-light); }
+  table.variants td.sku { color: var(--kd-blue); font-weight: 700; white-space: nowrap; }
+
+  /* Machinery */
+  .machine {
+    border: 0.4mm solid var(--border);
+    display: grid;
+    grid-template-columns: 58mm 1fr;
+    margin-bottom: 6mm;
+  }
+  .machine .m-img {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    padding: 4mm; border-right: 0.4mm solid var(--border);
+  }
+  .machine .m-img img { max-width: 100%; max-height: 52mm; object-fit: contain; }
+  .machine .m-info { padding: 4mm 5mm; }
+  .machine h3 { font-size: 13pt; font-weight: 600; margin-bottom: 1mm; }
+  .machine .m-sku { font-size: 7.5pt; color: var(--kd-blue); font-weight: 700; margin-bottom: 1.5mm; }
+  .machine .desc { font-size: 7.5pt; color: var(--gray); line-height: 1.5; margin-bottom: 2.5mm; }
+  .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8mm 6mm; font-size: 7pt; }
+  .specs .row { display: flex; justify-content: space-between; border-bottom: 0.3mm solid var(--border); padding-bottom: 0.8mm; }
+  .specs .k { color: var(--gray); }
+  .specs .v { font-weight: 600; text-align: right; }
+
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700; text-transform: uppercase;
+    font-size: 11pt;
+    letter-spacing: 0.05em;
+    margin: 6mm 0 3mm 0;
+    display: flex; align-items: center; gap: 3mm;
+  }
+  .section-label::after { content: ""; flex: 1; height: 0.5mm; background: var(--border); }
+
+  /* Contact block last page */
+  .contact-band {
+    position: absolute; bottom: 12mm; left: 14mm; right: 14mm;
+    background: var(--kd-black); color: #fff;
+    padding: 6mm 8mm;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2mm 8mm;
+  }
+  .contact-band::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1.4mm; background: var(--kd-blue);
+  }
+  .contact-band h3 { font-size: 13pt; grid-column: 1 / -1; margin-bottom: 1mm; }
+  .contact-band .item { font-size: 8.5pt; color: rgba(255,255,255,0.85); }
+  .contact-band .item b { color: #3D93D4; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-size: 7pt; letter-spacing: 0.12em; display: block; }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1: COVER ================= -->
+<div class="page">
+  <div class="cover-chevron">
+    <img src="file:///Users/eduardobet/Projects/dybdi/public/images/hero_bg.webp" alt="" />
+    <div class="tint"></div>
+  </div>
+
+  <div class="cover-logo">
+    <img src="file:///Users/eduardobet/Projects/dybdi/public/images/logo-full.png" alt="Discos y Brocas del Istmo" />
+  </div>
+
+  <div class="cover-year">Catálogo 2026</div>
+
+  <div class="cover-title">
+    <img src="file:///Users/eduardobet/Projects/dybdi/public/images/kern-deudiam.png" alt="KERN-DEUDIAM" style="height: 14mm;" />
+    <h1>Discos, Brocas <span class="y">y</span> Maquinaria Profesional</h1>
+    <p class="sub">
+      Distribuidor autorizado <strong>KERN-DEUDIAM®</strong> en Panamá.
+      Herramientas de diamante de calidad alemana para profesionales de la construcción.
+    </p>
+  </div>
+
+  <div class="cover-tags">
+    <span class="tag-solid">Made in Germany</span>
+    <span class="tag-line">ISO 9001:2015</span>
+  </div>
+
+  <div class="cover-strip-top"></div>
+  <div class="cover-strip">
+    <span><span class="accent">WhatsApp</span> +507 6660-4603</span>
+    <span>ventas@discosybrocasdelistmo.com</span>
+    <span>www.discosybrocasdelistmo.com</span>
+  </div>
+</div>
+
+<!-- ================= PAGE 2: DISCOS ================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="title">
+      <h2>Discos de Diamante</h2>
+      <div class="bar"></div>
+      <div class="cat-sub">Para cortadora de suelo / cortadora manual / amoladora angular</div>
+    </div>
+    <div class="logos">
+      <img class="mini-logo" src="file:///Users/eduardobet/Projects/dybdi/public/images/logo-full.png" alt="" />
+      <img class="kd-logo" src="file:///Users/eduardobet/Projects/dybdi/public/images/kern-deudiam.png" alt="" />
+    </div>
+  </div>
+
+  <div class="page-body">
+    <div class="grid-2">
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/laser-universal.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Laser Universal</h3>
+          <p class="desc">Soldadura LASER para asfalto y hormigón. Segmentado, entalla cerrada, con segmentos de protección. Cortadora de suelo hasta 10 kW.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th><th>Segmento</th></tr>
+            <tr><td class="sku">25-351</td><td>350 x 25.40 mm | 14" x 1"</td><td>10 mm</td></tr>
+            <tr><td class="sku">25-353</td><td>450 x 25.40 mm | 18" x 1"</td><td>10 mm</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/c-plus.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Laser C-Plus Multipropósito</h3>
+          <p class="desc">Disco multipropósito con soldadura LASER para hormigón, piedras de hormigón, albañilería y materiales similares.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th><th>Segmento</th></tr>
+            <tr><td class="sku">23-020</td><td>350 x 25.40 mm | 14" x 1"</td><td>10 mm</td></tr>
+            <tr><td class="sku">23-022</td><td>450 x 25.40 mm | 18" x 1"</td><td>10 mm</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/laser-traser.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Laser Tracer</h3>
+          <p class="desc">Soldadura LASER para asfalto y concreto fresco. Segmentado, entalla cerrada, con segmentos de protección. Ideal para juntas y trazado.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th><th>Segmento</th></tr>
+            <tr><td class="sku">26-412</td><td>350 x 25.40 mm | 14" x 1"</td><td>10 mm</td></tr>
+            <tr><td class="sku">26-414</td><td>450 x 25.40 mm | 18" x 1"</td><td>10 mm</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/laser-fb-uni.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Laser FB-UNI</h3>
+          <p class="desc">Soldadura LASER para concreto y materiales similares. Segmentado, entalla abierta. Cortadora de suelo hasta 10 kW.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th><th>Segmento</th></tr>
+            <tr><td class="sku">26-500</td><td>350 x 25.40 mm | 14" x 1"</td><td>6 mm</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/super-titan.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Sinter Titan</h3>
+          <p class="desc">Disco sinterizado segmentado para hormigón, piedras de hormigón, albañilería y materiales similares. Alta durabilidad.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th><th>Segmento</th></tr>
+            <tr><td class="sku">24-141</td><td>115 x 22.23 mm | 4,5" x 7/8"</td><td>10 mm</td></tr>
+            <tr><td class="sku">24-144</td><td>180 x 22.53 mm | 7" x 7/8"</td><td>10 mm</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/tec-f.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Turbo TEC-F</h3>
+          <p class="desc">Disco turbo sinterizado continuo, corte limpio y extra fino. Porcelánicos, piedras naturales, cerámica y materiales duros.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th><th>Segmento</th></tr>
+            <tr><td class="sku">24-075</td><td>125 x 22.23 mm | 5" x 7/8"</td><td>1.2 mm</td></tr>
+            <tr><td class="sku">24-077</td><td>180 x 22.23 mm | 7" x 7/8"</td><td>1.6 mm</td></tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Discos y Brocas del Istmo · Distribuidor autorizado KERN-DEUDIAM®</span>
+    <span>www.discosybrocasdelistmo.com · WhatsApp +507 6660-4603</span>
+    <span class="pg">02</span>
+  </div>
+</div>
+
+<!-- ================= PAGE 3: BROCAS / COPAS / ACCESORIOS ================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="title">
+      <h2>Brocas de Diamante</h2>
+      <div class="bar"></div>
+      <div class="cat-sub">Perforación en húmedo · Copas de desgaste · Accesorios</div>
+    </div>
+    <div class="logos">
+      <img class="mini-logo" src="file:///Users/eduardobet/Projects/dybdi/public/images/logo-full.png" alt="" />
+      <img class="kd-logo" src="file:///Users/eduardobet/Projects/dybdi/public/images/kern-deudiam.png" alt="" />
+    </div>
+  </div>
+
+  <div class="page-body">
+    <div class="grid-2">
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/kbw-premiumpng.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Brocas en Húmedo KBW Premium</h3>
+          <p class="desc">Conexión 1 ¼" UNC, soldadura LASER, segmentos roof top. Corte muy rápido y larga duración en hormigón armado y albañilería. Longitud útil 450 mm.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th><th>Segmento</th></tr>
+            <tr><td class="sku">16-700L</td><td>Ø 52 mm | 2"</td><td>24 x 3.5 x 10 mm</td></tr>
+            <tr><td class="sku">16-718L</td><td>Ø 65 mm | 2" 1/2</td><td>24 x 3.5 x 10 mm</td></tr>
+            <tr><td class="sku">16-735L</td><td>Ø 78 mm | 3"</td><td>24 x 3.5 x 10 mm</td></tr>
+            <tr><td class="sku">16-705L</td><td>Ø 102 mm | 4"</td><td>24 x 3.5 x 10 mm</td></tr>
+            <tr><td class="sku">16-709L</td><td>Ø 127 mm | 5"</td><td>24 x 3.5 x 10 mm</td></tr>
+            <tr><td class="sku">16-715L</td><td>Ø 200 mm | 8"</td><td>24 x 4.0 x 10 mm</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/dtox_broca.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Brocas de Corte Húmedo DBF111</h3>
+          <p class="desc">Brocas de corte húmedo con segmentos de aro DBF111 (grupo DTOX, sin cobalto) para hormigón armado y albañilería. Larga duración.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th></tr>
+            <tr><td class="sku">14-207</td><td>3/4"</td></tr>
+            <tr><td class="sku">14-209</td><td>1"</td></tr>
+            <tr><td class="sku">14-227</td><td>1 1/4"</td></tr>
+            <tr><td class="sku">14-232</td><td>1 1/2"</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Copas de Desgaste y Accesorios</div>
+
+    <div class="grid-3">
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/copa-diamante.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Copas de Diamante TS-S</h3>
+          <p class="desc">Sinterizada, segmentada, hilera doble. Para amoladora angular y pulidoras. Eje Ø 22.23 mm.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Ø Medidas</th></tr>
+            <tr><td class="sku">29-528</td><td>Ø 115 x 22.00 mm | 4,5" x 7/8"</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/13-071-adaptador_hembra.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Adaptador Hembra 1 ¼" A H</h3>
+          <p class="desc">Adaptador de conexión 1 ¼" para sistemas de perforación con broca diamantada.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Medida</th></tr>
+            <tr><td class="sku">13-071</td><td>1 1/4" A H</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-wrap">
+          <span class="mig">Made in Germany</span>
+          <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/extension_300-01501.webp" alt="" />
+        </div>
+        <div class="info">
+          <h3>Alargo de Acero para Broca</h3>
+          <p class="desc">Alargo de acero 1 ¼" UNC para perforación profunda y alcance extendido.</p>
+          <table class="variants">
+            <tr><th>Código</th><th>Medida</th></tr>
+            <tr><td class="sku">300-01501</td><td>300 mm | 12"</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Discos y Brocas del Istmo · Distribuidor autorizado KERN-DEUDIAM®</span>
+    <span>www.discosybrocasdelistmo.com · WhatsApp +507 6660-4603</span>
+    <span class="pg">03</span>
+  </div>
+</div>
+
+<!-- ================= PAGE 4: MAQUINARIA + CONTACTO ================= -->
+<div class="page">
+  <div class="page-header">
+    <div class="title">
+      <h2>Maquinaria</h2>
+      <div class="bar"></div>
+      <div class="cat-sub">Cortadoras de suelo · Equipos de perforación · Made in Germany</div>
+    </div>
+    <div class="logos">
+      <img class="mini-logo" src="file:///Users/eduardobet/Projects/dybdi/public/images/logo-full.png" alt="" />
+      <img class="kd-logo" src="file:///Users/eduardobet/Projects/dybdi/public/images/kern-deudiam.png" alt="" />
+    </div>
+  </div>
+
+  <div class="page-body">
+
+    <div class="machine">
+      <div class="m-img">
+        <span class="mig">Made in Germany</span>
+        <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/KDS150.webp" alt="" />
+      </div>
+      <div class="m-info">
+        <h3>Set de Perforación KDS150 + DK17</h3>
+        <div class="m-sku">Código: KDS150-DK17</div>
+        <p class="desc">Set completo de perforación con pedestal KDS150 y motor DK17 de 2000W. Taladrado en ángulo 0-45°, bajada rápida, extracción de polvo y 3 velocidades.</p>
+        <div class="specs">
+          <div class="row"><span class="k">Motor</span><span class="v">DK17 - 2000W</span></div>
+          <div class="row"><span class="k">Tensión</span><span class="v">230V o 110V</span></div>
+          <div class="row"><span class="k">Ø en seco</span><span class="v">20-200 mm (3/4"-8")</span></div>
+          <div class="row"><span class="k">Ø en húmedo</span><span class="v">20-150 mm (3/4"-6")</span></div>
+          <div class="row"><span class="k">Velocidades</span><span class="v">540 / 1200 / 2520 RPM</span></div>
+          <div class="row"><span class="k">Conexión</span><span class="v">1 1/4" UNC + G 1/2"</span></div>
+          <div class="row"><span class="k">Peso motor</span><span class="v">6.3 kg</span></div>
+          <div class="row"><span class="k">Peso pedestal</span><span class="v">8.0 kg</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="machine">
+      <div class="m-img">
+        <span class="mig">Made in Germany</span>
+        <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/KDF450-B%3AH.webp" alt="" />
+      </div>
+      <div class="m-info">
+        <h3>Cortadora de Suelo KDF450-B/H</h3>
+        <div class="m-sku">Código: KDF450-B/H</div>
+        <p class="desc">Cortadora de suelo a gasolina con motor Honda GX390 Zyckon. Ajuste de profundidad continuo y depósito de agua de 25 litros.</p>
+        <div class="specs">
+          <div class="row"><span class="k">Motor</span><span class="v">Honda GX390 Zyckon</span></div>
+          <div class="row"><span class="k">Potencia</span><span class="v">8.7 kW / 11.7 CV</span></div>
+          <div class="row"><span class="k">Disco máximo</span><span class="v">Ø 450 mm (18")</span></div>
+          <div class="row"><span class="k">Profundidad máx.</span><span class="v">170 mm</span></div>
+          <div class="row"><span class="k">Velocidad</span><span class="v">2500 RPM</span></div>
+          <div class="row"><span class="k">Peso</span><span class="v">100 kg</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="machine">
+      <div class="m-img">
+        <span class="mig">Made in Germany</span>
+        <img src="file:///Users/eduardobet/Projects/dybdi/public/images/products/KDF500-B%3AH.webp" alt="" />
+      </div>
+      <div class="m-info">
+        <h3>Cortadora de Suelo KDF500-B/H</h3>
+        <div class="m-sku">Código: KDF500-B/H</div>
+        <p class="desc">Cortadora de suelo a gasolina de mayor capacidad con contador de horas trabajadas. Ideal para construcción profesional y empresas de alquiler.</p>
+        <div class="specs">
+          <div class="row"><span class="k">Motor</span><span class="v">Honda GX390 Zyckon</span></div>
+          <div class="row"><span class="k">Potencia</span><span class="v">8.7 kW / 11.7 CV</span></div>
+          <div class="row"><span class="k">Disco máximo</span><span class="v">Ø 500 mm (20")</span></div>
+          <div class="row"><span class="k">Profundidad máx.</span><span class="v">200 mm</span></div>
+          <div class="row"><span class="k">Velocidad</span><span class="v">2500 RPM</span></div>
+          <div class="row"><span class="k">Peso</span><span class="v">100 kg</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-band">
+      <h3>Solicite su cotización</h3>
+      <div class="item"><b>WhatsApp</b> +507 6660-4603</div>
+      <div class="item"><b>Email</b> ventas@discosybrocasdelistmo.com</div>
+      <div class="item"><b>Web</b> www.discosybrocasdelistmo.com</div>
+      <div class="item"><b>Ubicación</b> Ciudad de Panamá · Lun-Vie 8:00-17:00</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Discos y Brocas del Istmo · Distribuidor autorizado KERN-DEUDIAM®</span>
+    <span>www.discosybrocasdelistmo.com · WhatsApp +507 6660-4603</span>
+    <span class="pg">04</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -47,9 +47,16 @@ export function Footer() {
                 </p>
               </div>
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed">
-              Distribuidor autorizado <span className="text-white/80 font-semibold">KERN-DEUDIAM®</span> de herramientas de diamante premium en Panamá.
+            <p className="text-white/50 text-sm leading-relaxed mb-5">
+              Distribuidor autorizado de herramientas de diamante premium en Panamá.
             </p>
+            <Image
+              src="/images/kern-deudiam-white.png"
+              alt="KERN-DEUDIAM"
+              width={780}
+              height={263}
+              className="h-9 w-auto opacity-80"
+            />
           </div>
 
           {/* Navigation */}

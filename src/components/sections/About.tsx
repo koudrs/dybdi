@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -75,6 +76,21 @@ export function About() {
               profesionales del sector de la construcción. Calidad
               "Made in Germany" para los profesionales de Panamá.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="mb-8"
+            >
+              <Image
+                src="/images/kern-deudiam.png"
+                alt="KERN-DEUDIAM"
+                width={780}
+                height={263}
+                className="h-12 sm:h-14 w-auto"
+              />
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

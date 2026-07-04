@@ -21,11 +21,16 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-5"
+              className="mb-6 lg:hidden"
             >
-              <span className="inline-block bg-[#1D1D1B] text-white font-heading font-bold text-sm uppercase tracking-[0.2em] px-4 py-1.5">
-                Premium
-              </span>
+              <Image
+                src="/images/kern-deudiam.png"
+                alt="KERN-DEUDIAM"
+                width={780}
+                height={263}
+                className="h-9 w-auto"
+                priority
+              />
             </motion.div>
 
             <motion.h1
@@ -34,8 +39,8 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1D1D1B] uppercase tracking-tight leading-[1.05] mb-6"
             >
-              Herramientas de Diamante{" "}
-              <span className="text-[#1272B9]">y</span> Maquinaria
+              Discos, Brocas{" "}
+              <span className="text-[#1272B9]">y</span> Maquinaria Profesional
             </motion.h1>
 
             <motion.div
@@ -51,8 +56,8 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="text-base sm:text-lg text-[#6B7280] max-w-xl mb-8 leading-relaxed"
             >
-              Distribuidor autorizado <strong className="text-[#1D1D1B]">KERN-DEUDIAM®</strong> en Panamá.
-              Discos de corte, brocas diamantadas y equipos de perforación de calidad alemana.
+              Herramientas de diamante <strong className="text-[#1D1D1B]">KERN-DEUDIAM®</strong> de
+              calidad alemana para los profesionales de la construcción en Panamá.
             </motion.p>
 
             <motion.div
@@ -134,9 +139,13 @@ export function Hero() {
 
               {/* Content inside chevron */}
               <div className="absolute inset-0 flex flex-col justify-center pl-10 pr-[45%]">
-                <span className="font-heading text-2xl font-semibold uppercase tracking-widest text-white mb-3">
-                  KERN-DEUDIAM®
-                </span>
+                <Image
+                  src="/images/kern-deudiam-white.png"
+                  alt="KERN-DEUDIAM"
+                  width={780}
+                  height={263}
+                  className="h-14 w-auto self-start mb-4"
+                />
                 <p className="text-white/85 leading-relaxed mb-5">
                   Herramientas diamantadas y maquinaria fabricadas en Alemania desde 1977.
                 </p>

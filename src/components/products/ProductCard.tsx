@@ -36,20 +36,15 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
 
-        {product.madeInGermany && (
-          <span className="absolute top-3 left-3 bg-[#1D1D1B] text-white font-heading text-[10px] font-bold uppercase tracking-widest px-2.5 py-1">
-            Made in Germany
-          </span>
-        )}
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-5">
-        <h3 className="font-heading text-lg font-bold text-[#1D1D1B] uppercase tracking-tight leading-tight mb-2 group-hover:text-[#1272B9] transition-colors">
+      <div className="flex flex-col flex-1 p-3.5 sm:p-5">
+        <h3 className="font-heading text-sm sm:text-lg font-bold text-[#1D1D1B] uppercase tracking-tight leading-tight mb-2 group-hover:text-[#1272B9] transition-colors">
           {product.name}
         </h3>
 
-        <p className="text-[#6B7280] text-sm mb-4 line-clamp-2 leading-relaxed">
+        <p className="text-[#6B7280] text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
           {product.description}
         </p>
 
@@ -60,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
             product.variants.length > 2 && "max-h-30"
           )}
         >
-          <table className="w-full text-xs">
+          <table className="w-full text-[10px] sm:text-xs">
             <thead className="sticky top-0 z-10">
               <tr className="bg-[#1D1D1B] text-white font-heading uppercase tracking-wide">
                 <th className="text-left font-semibold px-3 py-2">Código</th>
@@ -158,10 +153,10 @@ export function ProductCard({ product }: ProductCardProps) {
         </AnimatePresence>
 
         {/* Actions */}
-        <div className="mt-auto flex gap-3">
+        <div className="mt-auto flex flex-col sm:flex-row gap-2 sm:gap-3">
           <button
             onClick={() => setShowDetails(!showDetails)}
-            className="flex-1 h-11 border border-[#1D1D1B]/20 text-[#1D1D1B] text-sm font-semibold hover:bg-[#1D1D1B] hover:text-white hover:border-[#1D1D1B] transition-all duration-300 flex items-center justify-center gap-1.5"
+            className="flex-1 h-10 sm:h-11 border border-[#1D1D1B]/20 text-[#1D1D1B] text-xs sm:text-sm font-semibold hover:bg-[#1D1D1B] hover:text-white hover:border-[#1D1D1B] transition-all duration-300 flex items-center justify-center gap-1.5"
           >
             Detalles
             <ChevronDown
@@ -174,7 +169,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
           <Button
             asChild
-            className="flex-1 h-11 rounded-none bg-[#1272B9] hover:bg-[#0D5A94] text-white text-sm font-semibold transition-all duration-300"
+            className="flex-1 h-10 sm:h-11 rounded-none bg-[#1272B9] hover:bg-[#0D5A94] text-white text-xs sm:text-sm font-semibold transition-all duration-300"
           >
             <a
               href={getProductWhatsAppLink(product.name)}

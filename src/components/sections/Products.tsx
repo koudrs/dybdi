@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useMemo } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { categories, products as allProducts } from "@/data/products";
 import { ProductCard } from "@/components/products/ProductCard";
@@ -116,9 +117,13 @@ export function Products() {
             <span className="inline-block bg-[#1D1D1B] text-white font-heading font-bold text-xs uppercase tracking-[0.2em] px-3 py-1">
               Catálogo
             </span>
-            <span className="text-[#6B7280] text-xs font-semibold uppercase tracking-widest">
-              KERN-DEUDIAM®
-            </span>
+            <Image
+              src="/images/kern-deudiam.png"
+              alt="KERN-DEUDIAM"
+              width={780}
+              height={263}
+              className="h-7 w-auto"
+            />
           </motion.div>
 
           <motion.h2
@@ -217,7 +222,7 @@ export function Products() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 items-start"
         >
           {paginatedProducts.map((product, index) => (
             <motion.div
