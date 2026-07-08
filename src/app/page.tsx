@@ -6,8 +6,13 @@ import { Products } from "@/components/sections/Products";
 import { CTA } from "@/components/sections/CTA";
 import { Contact } from "@/components/sections/Contact";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { SiteSuspended } from "@/components/SiteSuspended";
 
 export default function Home() {
+  if (process.env.SITE_SUSPENDED === "true") {
+    return <SiteSuspended />;
+  }
+
   return (
     <>
       <Header />
